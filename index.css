@@ -93,7 +93,7 @@ header button a {
 }
 
 /* -------------------- */
-/*        MAIN          */
+/*         MAIN         */
 /* -------------------- */
 
 main {
@@ -104,9 +104,9 @@ main {
   padding-bottom: 60px;
 }
 
-/* -------------------- */
-/*        SECCIÓN       */
-/* -------------------- */
+/* ------------------------ */
+/*     SECCIÓN TITULO       */
+/* ------------------------ */
 
 .seccion-principal {
   display: flex;
@@ -166,7 +166,9 @@ main {
   border-radius: 20px;
 }
 
-/* ---------- SECCIÓN BENEFICIOS ---------- */
+/* ------------------------ */
+/*    SECCIÓN BENEFICIOS    */
+/* ------------------------ */
 
 .seccion-beneficios {
   text-align: center;
