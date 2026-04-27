@@ -255,8 +255,13 @@ main {
   color: #a0f5e8;
 }
 
+.redes-sociales {
+  display: flex;
+  gap: 8px;
+}
+
 .footer-columna i {
-  font-size: 18px;
+  font-size: 20px;
   color: #333;
   transition: 0.25s ease;
 }
