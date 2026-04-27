@@ -1,0 +1,135 @@
+/* -------------------- */
+/*        GLOBAL        */
+/* -------------------- */
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* -------------------- */
+/*     CONTENEDOR       */
+/* -------------------- */
+
+.contenedor-login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #e8fffb;
+}
+
+/* -------------------- */
+/*        CAJA          */
+/* -------------------- */
+
+.login-caja {
+  width: 380px;
+  padding: 40px;
+
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px #00000020;
+
+  text-align: center;
+}
+
+.login-caja h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* -------------------- */
+/*        FORM          */
+/* -------------------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  width: 100%;
+  max-width: 355px;
+}
+
+label {
+  width: 100%;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+
+  border: 1px solid #ccc;
+  border-radius: 12px;
+
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+input:focus {
+  border-color: #36bba7;
+  outline: none;
+}
+
+/* -------------------- */
+/*        BOTÓN         */
+/* -------------------- */
+
+.boton-login {
+  width: 35%;
+  padding: 12px;
+
+  background-color: #1cb8a0;
+  color: white;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  margin-left: 35%;
+  display: block;
+  transition: 0.25s ease;
+}
+
+.boton-login a {
+  text-decoration: none;
+  color: white;
+}
+
+.boton-login:hover {
+  background-color: #2a8f82;
+}
+
+/* -------------------- */
+/*     REGISTRO LINK    */
+/* -------------------- */
+
+.registro {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.registro a {
+  color: #36bba7;
+  font-weight: 600;
+}
+
+.registro a:hover {
+  text-decoration: underline;
+}
