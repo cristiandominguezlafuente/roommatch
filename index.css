@@ -104,7 +104,9 @@ main {
   padding-bottom: 60px;
 }
 
-/* ---------- SECCIÓN PRINCIPAL ---------- */
+/* -------------------- */
+/*        SECCIÓN       */
+/* -------------------- */
 
 .seccion-principal {
   display: flex;
@@ -254,7 +256,7 @@ main {
 }
 
 .footer-columna i {
-  font-size: 26px;
+  font-size: 18px;
   color: #333;
   transition: 0.25s ease;
 }
