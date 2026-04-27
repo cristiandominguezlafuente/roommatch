@@ -143,7 +143,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 80px;
-  margin-left: 200px;
+  margin-left: 300px;
   margin-right: 100px;
   padding: 20px;
 }
@@ -151,11 +151,26 @@ main {
 .favorito-item {
   width: 300px;
   height: 200px;
-  background-image: url("https://img4.idealista.com/blur/480_360_mq/0/id.pro.es.image.master/9e/d4/d7/1345564827.jpg");
   background-size: cover;
   border-radius: 20px;
   overflow: hidden;
   margin-top: 60px;
+}
+
+.habitacion1 {
+  background-image: url("https://www.shutterstock.com/image-photo/modern-luxury-home-exterior-large-600nw-2533389789.jpg");
+}
+
+.habitacion2 {
+  background-image: url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVybW9zYSUyMGNhc2F8ZW58MHx8MHx8fDA%3D");
+}
+
+.habitacion3 {
+  background-image: url("https://images.pexels.com/photos/7031408/pexels-photo-7031408.jpeg?cs=srgb&dl=pexels-artbovich-7031408.jpg&fm=jpg");
+}
+
+.habitacion4 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhgpkKwsubtasslhrEeflkMFFInDosGhEoTA&s");
 }
 
 .h2fav {
