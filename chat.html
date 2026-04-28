@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat - RoomMatch</title>
-    <link rel="stylesheet" href="chat.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -115,6 +116,83 @@
         </button>
       </div>
     </header>
+
+    <main class="chat-panel">
+      <aside class="lista-chats">
+        <div class="chats-cabecera">
+          <h2>Mensajes</h2>
+        </div>
+
+        <div class="chat-item activo">
+          <img
+            src="https://i.pravatar.cc/150?img=12"
+            alt="Avatar"
+            class="chat-avatar"
+          />
+          <div class="chat-info">
+            <span class="chat-nombre">Carlos R.</span>
+            <span class="chat-ultimo">Hola! ¿Sigue disponible?</span>
+          </div>
+          <span class="chat-hora">10:32</span>
+        </div>
+
+        <div class="chat-item">
+          <img
+            src="https://i.pravatar.cc/150?img=25"
+            alt="Avatar"
+            class="chat-avatar"
+          />
+          <div class="chat-info">
+            <span class="chat-nombre">Marta G.</span>
+            <span class="chat-ultimo">Perfecto, nos vemos el lunes</span>
+          </div>
+          <span class="chat-hora">9:15</span>
+        </div>
+
+        <div class="chat-item">
+          <img
+            src="https://i.pravatar.cc/150?img=33"
+            alt="Avatar"
+            class="chat-avatar"
+          />
+          <div class="chat-info">
+            <span class="chat-nombre">Jordi P.</span>
+            <span class="chat-ultimo">¿Cuánto es el alquiler?</span>
+          </div>
+          <span class="chat-hora">Ayer</span>
+        </div>
+
+        <div class="chat-item">
+          <img
+            src="https://i.pravatar.cc/150?img=47"
+            alt="Avatar"
+            class="chat-avatar"
+          />
+          <div class="chat-info">
+            <span class="chat-nombre">Sara M.</span>
+            <span class="chat-ultimo">Genial, muchas gracias!</span>
+          </div>
+          <span class="chat-hora">Ayer</span>
+        </div>
+
+        <div class="chat-item">
+          <img
+            src="https://i.pravatar.cc/150?img=60"
+            alt="Avatar"
+            class="chat-avatar"
+          />
+          <div class="chat-info">
+            <span class="chat-nombre">Pau T.</span>
+            <span class="chat-ultimo">Te mando los datos ahora</span>
+          </div>
+          <span class="chat-hora">Lun</span>
+        </div>
+      </aside>
+
+      <section class="ventana-chat">
+        <div class="chat-vacio"></div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="footer-contenido">

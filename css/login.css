@@ -5,7 +5,6 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  background-color: #f5f5f5;
 }
 
 /* -------------------- */
@@ -17,8 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background-color: #e8fffb;
+  background: linear-gradient(135deg, #36bba7 0%, #a0f5e8 100%);
 }
 
 /* -------------------- */
@@ -27,24 +25,24 @@ body {
 
 .login-caja {
   width: 380px;
-  padding: 40px;
-
+  padding: 48px 40px;
   background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px #00000020;
-
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
   text-align: center;
 }
 
 .login-caja h1 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 800;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  color: #1a2e2b;
 }
 
 .subtitulo {
-  color: #555;
-  margin-bottom: 30px;
+  color: #5d6463;
+  font-size: 14px;
+  margin-bottom: 32px;
 }
 
 /* -------------------- */
@@ -54,8 +52,7 @@ body {
 form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-
+  gap: 12px;
   width: 100%;
   max-width: 355px;
 }
@@ -63,24 +60,29 @@ form {
 label {
   width: 100%;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   text-align: left;
+  color: #1a2e2b;
 }
 
 input {
   width: 100%;
-  padding: 12px;
-
-  border: 1px solid #ccc;
+  padding: 12px 16px;
+  border: 1.5px solid #e2eded;
   border-radius: 12px;
-
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  color: #1a2e2b;
+  background-color: #f9fefe;
+  box-sizing: border-box;
   transition: 0.25s ease;
 }
 
 input:focus {
   border-color: #36bba7;
+  background-color: #ffffff;
   outline: none;
+  box-shadow: 0 0 0 3px rgba(54, 187, 167, 0.12);
 }
 
 /* -------------------- */
@@ -88,22 +90,17 @@ input:focus {
 /* -------------------- */
 
 .boton-login {
-  width: 35%;
-  padding: 12px;
-
-  background-color: #1cb8a0;
+  width: 100%;
+  padding: 13px;
+  background-color: #36bba7;
   color: white;
-  font-weight: 600;
-
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-
-  margin-top: 5%;
-  margin-bottom: 5%;
-
-  margin-left: 35%;
-  display: block;
+  margin-top: 10px;
   transition: 0.25s ease;
 }
 
@@ -112,24 +109,17 @@ input:focus {
   color: white;
 }
 
-.boton-login:hover {
-  background-color: #2a8f82;
-}
-
 /* -------------------- */
 /*     REGISTRO LINK    */
 /* -------------------- */
 
 .registro {
-  margin-top: 20px;
-  font-size: 14px;
+  margin-top: 24px;
+  font-size: 13px;
+  color: #5d6463;
 }
 
 .registro a {
   color: #36bba7;
-  font-weight: 600;
-}
-
-.registro a:hover {
-  text-decoration: underline;
+  font-weight: 700;
 }
