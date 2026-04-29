@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tu Perfil — RoomMatch</title>
 
-    <link rel="stylesheet" href="../css/layout.css" />
-
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/perfil.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -114,6 +114,265 @@
       </div>
     </header>
 
+    <main class="panel">
+      <!-- PORTADA -->
+      <div class="portada">
+        <div class="fondo"></div>
+        <button class="btn-portada">
+          <i class="fa-solid fa-camera"></i> Cambiar portada
+        </button>
+      </div>
+
+      <!-- USUARIO -->
+      <div class="usuario">
+        <div class="avatar">
+          <img src="https://i.pravatar.cc/150?img=47" alt="Avatar" />
+          <button class="btn-avatar"><i class="fa-solid fa-camera"></i></button>
+        </div>
+        <div class="nombre">
+          <h1>
+            Laura Martínez
+            <span class="verificado"
+              ><i class="fa-solid fa-circle-check"></i
+            ></span>
+          </h1>
+          <p>Barcelona, España · Miembro desde enero 2025</p>
+        </div>
+        <button class="btn-editar">
+          <i class="fa-solid fa-pen"></i> Editar perfil
+        </button>
+      </div>
+
+      <!-- CUADRÍCULA -->
+      <div class="cuadricula">
+        <aside class="lateral">
+          <div class="tarjeta">
+            <div class="cabecera">
+              <div class="icono"><i class="fa-solid fa-user"></i></div>
+              <h3>Sobre mí</h3>
+            </div>
+            <p class="bio">
+              Estudiante de diseño, amante del café y de los espacios ordenados.
+              Busco piso tranquilo cerca del centro. No fumo y tengo horarios
+              estables 🌿
+            </p>
+            <div class="etiquetas">
+              <span class="etiqueta">🎨 Diseñadora</span>
+              <span class="etiqueta">🌿 No fumadora</span>
+              <span class="etiqueta">🐱 Tengo gato</span>
+              <span class="etiqueta">🎵 Música indie</span>
+              <span class="etiqueta">☕ Amante del café</span>
+            </div>
+          </div>
+
+          <div class="tarjeta">
+            <div class="cabecera">
+              <div class="icono"><i class="fa-solid fa-house"></i></div>
+              <h3>Preferencias</h3>
+            </div>
+            <ul class="lista">
+              <li>
+                <i class="fa-solid fa-euro-sign"></i> Presupuesto:
+                <strong>400 – 650 €/mes</strong>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i> Zona:
+                <strong>Eixample, Gràcia, Poblenou</strong>
+              </li>
+              <li>
+                <i class="fa-solid fa-people-group"></i> Compañeros:
+                <strong>1 – 3 personas</strong>
+              </li>
+              <li>
+                <i class="fa-solid fa-paw"></i> Mascotas:
+                <strong>Permitidas</strong>
+              </li>
+              <li>
+                <i class="fa-solid fa-smoking-ban"></i> Tabaco:
+                <strong>No</strong>
+              </li>
+              <li>
+                <i class="fa-solid fa-calendar-days"></i> Disponible:
+                <strong>1 jun. 2025</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tarjeta">
+            <div class="cabecera">
+              <div class="icono"><i class="fa-solid fa-earth-europe"></i></div>
+              <h3>Idiomas</h3>
+            </div>
+            <div class="idiomas">
+              <div class="idioma">
+                <span>🇪🇸 Español</span>
+                <div class="barra">
+                  <div class="relleno" style="width: 100%"></div>
+                </div>
+                <small>Nativo</small>
+              </div>
+              <div class="idioma">
+                <span>🇬🇧 Inglés</span>
+                <div class="barra">
+                  <div class="relleno" style="width: 80%"></div>
+                </div>
+                <small>Avanzado</small>
+              </div>
+              <div class="idioma">
+                <span>🇨🇦 Catalán</span>
+                <div class="barra">
+                  <div class="relleno" style="width: 65%"></div>
+                </div>
+                <small>Intermedio</small>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="principal">
+          <div class="stats">
+            <div class="stat">
+              <span class="numero">34</span>
+              <span class="label">Matches</span>
+            </div>
+            <div class="stat">
+              <span class="numero">12</span>
+              <span class="label">Favoritos</span>
+            </div>
+            <div class="stat">
+              <span class="numero"
+                >4.9 <i class="fa-solid fa-star estrella"></i
+              ></span>
+              <span class="label">Valoración</span>
+            </div>
+            <div class="stat">
+              <span class="numero">98%</span>
+              <span class="label">Perfil completo</span>
+            </div>
+          </div>
+
+          <div class="tarjeta">
+            <div class="cabecera">
+              <div class="icono"><i class="fa-solid fa-chart-simple"></i></div>
+              <h3>Completitud del perfil</h3>
+            </div>
+            <div class="barra-progreso">
+              <div class="progreso" style="width: 98%"></div>
+            </div>
+            <p class="aviso">
+              ¡Casi perfecto! Solo falta añadir una foto de portada.
+            </p>
+            <div class="checks">
+              <div class="check hecho">
+                <i class="fa-solid fa-circle-check"></i> Foto de perfil
+              </div>
+              <div class="check hecho">
+                <i class="fa-solid fa-circle-check"></i> Descripción personal
+              </div>
+              <div class="check hecho">
+                <i class="fa-solid fa-circle-check"></i> Preferencias de piso
+              </div>
+              <div class="check hecho">
+                <i class="fa-solid fa-circle-check"></i> Rango de presupuesto
+              </div>
+              <div class="check pendiente">
+                <i class="fa-regular fa-circle"></i> Foto de portada
+              </div>
+            </div>
+          </div>
+
+          <div class="tarjeta">
+            <div class="cabecera">
+              <div class="icono">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+              </div>
+              <h3>Actividad reciente</h3>
+            </div>
+            <div class="actividad">
+              <div class="fila">
+                <div class="punto verde"></div>
+                <div class="texto">
+                  <p><strong>Nuevo match</strong> con Piso en Gràcia</p>
+                  <small>Hace 2 horas</small>
+                </div>
+                <span class="badge verde-badge">Match</span>
+              </div>
+              <div class="fila">
+                <div class="punto rosa"></div>
+                <div class="texto">
+                  <p><strong>Guardaste</strong> un anuncio en Eixample</p>
+                  <small>Hace 5 horas</small>
+                </div>
+                <span class="badge rosa-badge">Favorito</span>
+              </div>
+              <div class="fila">
+                <div class="punto naranja"></div>
+                <div class="texto">
+                  <p><strong>Nuevo mensaje</strong> de Carlos R.</p>
+                  <small>Ayer</small>
+                </div>
+                <span class="badge naranja-badge">Mensaje</span>
+              </div>
+              <div class="fila">
+                <div class="punto verde"></div>
+                <div class="texto">
+                  <p><strong>Nuevo match</strong> con Piso en Poblenou</p>
+                  <small>Hace 2 días</small>
+                </div>
+                <span class="badge verde-badge">Match</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tarjeta">
+            <div class="cabecera">
+              <div class="icono"><i class="fa-solid fa-heart"></i></div>
+              <h3>Pisos guardados</h3>
+              <a href="favoritos.html" class="ver-todos">Ver todos →</a>
+            </div>
+            <div class="pisos">
+              <div class="piso">
+                <div
+                  class="imagen"
+                  style="background: linear-gradient(135deg, #a0f5e8, #5fd1bf)"
+                >
+                  <span class="precio">550€/mes</span>
+                </div>
+                <div class="info">
+                  <strong>Piso en Gràcia</strong>
+                  <small>2 hab · 65 m²</small>
+                </div>
+              </div>
+              <div class="piso">
+                <div
+                  class="imagen"
+                  style="background: linear-gradient(135deg, #b8e4f9, #5fd1bf)"
+                >
+                  <span class="precio">490€/mes</span>
+                </div>
+                <div class="info">
+                  <strong>Piso en Poblenou</strong>
+                  <small>3 hab · 80 m²</small>
+                </div>
+              </div>
+              <div class="piso">
+                <div
+                  class="imagen"
+                  style="background: linear-gradient(135deg, #d4f5a0, #5fd1bf)"
+                >
+                  <span class="precio">620€/mes</span>
+                </div>
+                <div class="info">
+                  <strong>Piso en Eixample</strong>
+                  <small>4 hab · 95 m²</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
     <footer class="footer">
       <div class="footer-contenido">
         <div class="footer-columna">
@@ -123,14 +382,12 @@
           <a href="">Beneficios</a>
           <a href="">Contacto</a>
         </div>
-
         <div class="footer-columna">
           <h4>Legal</h4>
           <a href="">Términos y condiciones</a>
           <a href="">Política de privacidad</a>
           <a href="">Cookies</a>
         </div>
-
         <div class="footer-columna">
           <h4>Redes sociales</h4>
           <div class="redes-sociales">
@@ -142,7 +399,6 @@
           </div>
         </div>
       </div>
-
       <div class="footer-copy">
         <p>© 2026 RoomMatch. Todos los derechos reservados.</p>
       </div>
