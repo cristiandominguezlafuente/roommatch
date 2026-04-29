@@ -475,7 +475,14 @@
 }
 
 .imagen {
-  height: 100px;
+  height: 140px;
+  position: relative;
+}
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .precio {
