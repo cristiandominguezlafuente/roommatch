@@ -53,14 +53,6 @@ main {
   overflow: hidden;
   border: 1px solid #e2eded;
   box-shadow: 0 4px 24px rgba(54, 187, 167, 0.08);
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
-}
-
-.favorito-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 36px rgba(54, 187, 167, 0.15);
 }
 
 .fav-imagen {
@@ -111,10 +103,10 @@ main {
   align-items: center;
   gap: 6px;
   width: fit-content;
-  transition: background-color 0.2s;
 }
 
 .btn-quitar:hover {
+  transition: 0.2s;
   background-color: #f26b9f;
   color: white;
 }
