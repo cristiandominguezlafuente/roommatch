@@ -1,6 +1,6 @@
 # Memoria del Proyecto: RoomMatch
 
-## 1. Títulooo
+## 1. Título
 **RoomMatch: Plataforma Web para conectar personas con gustos compartidos para compartir piso**
 
 ## 2. Integrantes del proyecto
