@@ -86,9 +86,7 @@ main {
 
 .botones-accion {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 24px;
+  justify-content: space-around;
 }
 
 .btn-no {
