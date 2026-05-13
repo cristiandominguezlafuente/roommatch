@@ -18,7 +18,7 @@ main {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  height: 750px;
+  height: 720px;
   cursor: pointer;
 }
 
@@ -60,33 +60,11 @@ main {
   margin: 0;
 }
 
-.btn-quitar {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  width: fit-content;
-  backdrop-filter: blur(4px);
-}
-
-.btn-quitar:hover {
-  background-color: #f26b9f;
-  border-color: #f26b9f;
-  transition: 0.2s;
-}
-
 .botones-accion {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 100px;
+  margin-top: -50px;
 }
 
 .btn-no {
