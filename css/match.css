@@ -1,84 +1,88 @@
 main {
   display: flex;
   flex-direction: column;
-}
-
-.recuadro-2 {
+  align-items: center;
   background-color: #f0fdfb;
-  padding: 40px 50px 60px;
+  padding: 100px 50px 60px;
 }
 
-.favoritos-lista {
-  max-width: 600px;
+.zona-match {
+  width: 100%;
+}
+
+.lista-match {
+  max-width: 440px;
   margin: 0 auto;
   width: 100%;
 }
 
-.favorito-item {
+.carta {
   position: relative;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  height: 720px;
+  height: 600px;
   cursor: pointer;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
 }
 
-.fav-imagen {
+.carta-foto {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
 }
 
-.fav-overlay {
+.carta-info {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 24px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  padding: 28px 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
-.fav-overlay h3 {
-  font-size: 18px;
-  font-weight: 700;
+.carta-info h3 {
+  font-size: 26px;
+  font-weight: 800;
   color: #ffffff;
   margin: 0;
 }
 
-.fav-precio {
-  font-size: 20px;
-  font-weight: 800;
+.carta-zona {
+  font-size: 15px;
+  font-weight: 600;
   color: #a0f5e8;
 }
 
-.fav-overlay p {
+.carta-info p {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
-.botones-accion {
+.acciones {
   display: flex;
   justify-content: center;
-  gap: 100px;
-  margin-top: -50px;
+  gap: 60px;
+  margin-top: 28px;
 }
 
 .btn-no {
-  width: 64px;
-  height: 64px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   border: 2px solid #e2eded;
   background: white;
   color: #f26b9f;
-  font-size: 24px;
+  font-size: 26px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: 0.2s;
 }
 
@@ -89,17 +93,18 @@ main {
 }
 
 .btn-si {
-  width: 64px;
-  height: 64px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   border: 2px solid #e2eded;
   background: white;
   color: #36bba7;
-  font-size: 24px;
+  font-size: 26px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: 0.2s;
 }
 
