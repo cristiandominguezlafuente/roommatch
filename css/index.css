@@ -98,10 +98,8 @@ main {
   width: 260px;
   border-radius: 20px;
   border: 1px solid #e2eded;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+
+ 
 }
 
 .beneficio:hover {
