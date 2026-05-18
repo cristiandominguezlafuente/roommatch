@@ -1,6 +1,4 @@
-/* -------------------- */
-/*        GLOBAL        */
-/* -------------------- */
+/*BODY GLOBAL*/
 
 body {
   margin: 0;
@@ -19,9 +17,7 @@ a {
   height: 20px;
 }
 
-/* -------------------- */
-/*        HEADER        */
-/* -------------------- */
+/*HEADER*/
 
 header {
   display: flex;
@@ -39,9 +35,7 @@ header {
   font-size: 20px;
 }
 
-/* -------------------- */
-/*         NAV          */
-/* -------------------- */
+/*NAV*/
 
 .nav {
   display: flex;
@@ -74,9 +68,7 @@ header {
   font-weight: 700;
 }
 
-/* -------------------- */
-/*        BOTÓN         */
-/* -------------------- */
+/*BOTÓN*/
 
 header button {
   height: 50px;
@@ -97,9 +89,7 @@ header button a {
   font-size: 14px;
 }
 
-/* -------------------- */
-/*        FOOTER        */
-/* -------------------- */
+/*FOOTER*/
 
 .footer {
   background-color: #1a2e2b;
