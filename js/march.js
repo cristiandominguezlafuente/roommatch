@@ -1,6 +1,6 @@
 const personas = [
   {
-    nombre: "Carlos, 24",
+    nombre: "Daniel Puente, 18",
     zona: "Busca piso en Eixample",
     desc: "Estudiante · No fumador · Tiene perro",
     foto: "img/chat/foto-perfil-1.png",
@@ -16,6 +16,12 @@ const personas = [
     zona: "Busca piso en Poblenou",
     desc: "Gamer · Fumador · Futbolero",
     foto: "img/chat/foto-perfil.png",
+  },
+  {
+    nombre: "Marc García, 17",
+    zona: "Busca piso en Badalona",
+    desc: "Gamer · Mujeriego · Futbolero",
+    foto: "img/chat/foto-perfil-3.png",
   },
 ];
 

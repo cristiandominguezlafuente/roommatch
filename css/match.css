@@ -28,13 +28,15 @@ main {
 .carta-foto {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .carta-foto img {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center top;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .carta-info {
