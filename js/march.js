@@ -29,12 +29,31 @@ let actual = 0;
 
 function mostrarPersona() {
   const p = personas[actual];
-  document.querySelector(".carta-foto img").src = p.foto;
-  document.querySelector(".carta-info h3").textContent = p.nombre;
-  document.querySelector(".carta-zona").textContent = p.zona;
-  document.querySelector(".carta-info p").textContent = p.desc;
+
+  const img = document.querySelector(".carta-foto img");
+  const nombre = document.querySelector(".carta-info h3");
+  const zona = document.querySelector(".carta-zona");
+  const desc = document.querySelector(".carta-info p");
+
+  if (!img || !nombre || !zona || !desc) return;
+
+  img.src = p.foto;
+  nombre.textContent = p.nombre;
+  zona.textContent = p.zona;
+  desc.textContent = p.desc;
 }
 
+function siguiente() {
+  actual++;
+
+  if (actual < personas.length) {
+    mostrarPersona();
+  } else {
+    alert("No hay más personas por ahora");
+  }
+}
+
+// botones
 document.querySelector(".btn-si").addEventListener("click", () => {
   alert("¡Match con " + personas[actual].nombre + "!");
   siguiente();
@@ -44,11 +63,4 @@ document.querySelector(".btn-no").addEventListener("click", () => {
   siguiente();
 });
 
-function siguiente() {
-  actual++;
-  if (actual < personas.length) {
-    mostrarPersona();
-  } else {
-    alert("No hay más personas por ahora");
-  }
-}
+mostrarPersona();
