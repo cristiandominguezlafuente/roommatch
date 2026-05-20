@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RoomMatch — Crear cuenta</title>
+    <link rel="icon" sizes="64x64" href="img/assets/logo-roommatch.png" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="register-page">
+    <div class="register-card">
+      <div class="register-icon-wrap">
+        <i class="fa-solid fa-user-plus"></i>
+      </div>
+
+      <p class="register-brand">RoomMatch</p>
+      <h1 class="register-title">Crear cuenta</h1>
+      <p class="register-subtitle">Únete a la comunidad de RoomMatch</p>
+
+      <form class="register-form" action="#" method="post">
+        <label class="form-label" for="reg-name">Nombre completo</label>
+        <div class="form-field">
+          <i class="fa-solid fa-user"></i>
+          <input
+            id="reg-name"
+            type="text"
+            placeholder="John Doe"
+            autocomplete="name"
+            required
+          />
+        </div>
+
+        <label class="form-label" for="reg-email">Correo electrónico</label>
+        <div class="form-field">
+          <i class="fa-solid fa-envelope"></i>
+          <input
+            id="reg-email"
+            type="email"
+            placeholder="ejemplo@correo.com"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <label class="form-label" for="reg-pass">Contraseña</label>
+        <div class="form-field">
+          <i class="fa-solid fa-lock"></i>
+          <input
+            id="reg-pass"
+            type="password"
+            placeholder="••••••••"
+            autocomplete="new-password"
+            required
+          />
+          <button
+            type="button"
+            class="btn-toggle-pass"
+            onclick="togglePass()"
+            aria-label="Mostrar contraseña"
+          >
+            <i class="fa-solid fa-eye" id="eye-icon"></i>
+          </button>
+        </div>
+
+        <button type="submit" class="btn-register-submit">Registrarse</button>
+      </form>
+
+      <div class="divider">
+        <div class="divider-line"></div>
+        <span>O CONTINÚA CON</span>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="register-social">
+        <button class="btn-social" aria-label="Continuar con Google">
+          <i class="fa-brands fa-google"></i>
+        </button>
+        <button class="btn-social" aria-label="Continuar con Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </button>
+      </div>
+
+      <p class="register-footer">
+        ¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a>
+      </p>
+    </div>
+  </body>
+  <script src="js/register.js"></script>
+</html>

@@ -1,0 +1,233 @@
+/* -------------------- */
+/*    REGISTER PAGE     */
+/* -------------------- */
+
+body.register-page {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #36bba7;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* -------------------- */
+/*    REGISTER CARD     */
+/* -------------------- */
+
+.register-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #e8f7f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.register-icon-wrap i {
+  font-size: 26px;
+  color: #36bba7;
+}
+
+.register-brand {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: #36bba7;
+  margin: 0 0 6px;
+}
+
+.register-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a2e2b;
+  margin: 0 0 4px;
+}
+
+.register-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #5d6463;
+  margin: 0 0 28px;
+}
+
+/* -------------------- */
+/*      FORM FIELDS     */
+/* -------------------- */
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1a2e2b;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f0fdfb;
+  border: 1.5px solid #d0eeea;
+  border-radius: 12px;
+  padding: 0 14px;
+  height: 52px;
+  margin-bottom: 18px;
+  transition: border-color 0.2s ease;
+}
+
+.form-field:focus-within {
+  border-color: #36bba7;
+}
+
+.form-field i {
+  font-size: 16px;
+  color: #36bba7;
+  flex-shrink: 0;
+}
+
+.form-field input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #1a2e2b;
+  width: 100%;
+}
+
+.form-field input::placeholder {
+  color: #a0b3b0;
+}
+
+/* -------------------- */
+/*   BTN TOGGLE PASS    */
+/* -------------------- */
+
+.btn-toggle-pass {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #36bba7;
+  display: flex;
+  align-items: center;
+}
+
+/* -------------------- */
+/*   BTN SUBMIT REGISTER */
+/* -------------------- */
+
+.btn-register-submit {
+  width: 100%;
+  background-color: #1a2e2b;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  border-radius: 30px;
+  height: 52px;
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-register-submit:hover {
+  background-color: #36bba7;
+}
+
+/* -------------------- */
+/*       DIVIDER        */
+/* -------------------- */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #e2eded;
+}
+
+.divider span {
+  font-size: 11px;
+  font-weight: 700;
+  color: #a0b3b0;
+  letter-spacing: 1px;
+}
+
+/* -------------------- */
+/*    REGISTER SOCIAL   */
+/* -------------------- */
+
+.register-social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.btn-social {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid #e2eded;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #5d6463;
+  transition: border-color 0.2s ease;
+}
+
+.btn-social:hover {
+  border-color: #36bba7;
+  color: #36bba7;
+}
+
+/* -------------------- */
+/*   REGISTER FOOTER    */
+/* -------------------- */
+
+.register-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #5d6463;
+  margin: 0;
+}
+
+.register-footer a {
+  color: #1a2e2b;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-footer a:hover {
+  color: #36bba7;
+}
