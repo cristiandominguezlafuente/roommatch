@@ -23,30 +23,18 @@
       <h1>Crear cuenta</h1>
       <p class="subtitulo">Únete a la comunidad de RoomMatch</p>
 
-      <form id="form-register" action="#" method="post">
+      <form action="">
         <label for="reg-name">Nombre completo</label>
-        <input
-          id="reg-name"
-          type="text"
-          placeholder="John Doe"
-          autocomplete="name"
-          required
-        />
+        <input type="text" placeholder="Nombre"  />
 
         <label for="reg-email">Correo electrónico</label>
-        <input
-          id="reg-email"
-          type="email"
-          placeholder="ejemplo@correo.com"
-          autocomplete="email"
-          required
-        />
+        <input type="email" placeholder="Correo" />
 
         <label for="reg-pass">Contraseña</label>
         <div class="campo-pass">
-          <input type="password" placeholder="••••••••" />
+          <input type="password" placeholder="Contraseña" />
           <button class="btn-toggle-pass">
-            <i class="fa-solid fa-eye" id="eye-icon"></i>
+            <i class="fa-solid fa-eye"></i>
           </button>
         </div>
 
@@ -60,10 +48,10 @@
       </div>
 
       <div class="register-social">
-        <button class="btn-social" aria-label="Continuar con Google">
+        <button class="btn-social">
           <i class="fa-brands fa-google"></i>
         </button>
-        <button class="btn-social" aria-label="Continuar con Facebook">
+        <button class="btn-social">
           <i class="fa-brands fa-facebook"></i>
         </button>
       </div>
