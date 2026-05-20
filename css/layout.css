@@ -62,31 +62,31 @@ header {
   color: #36bba7;
 }
 
-.nav a.activo {
-  background-color: #f0fdfb;
-  color: #36bba7;
-  font-weight: 700;
-}
-
 /*BOTÓN*/
 
-header button {
-  height: 50px;
-  padding: 10px 18px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  background-color: #5fd1bf;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-header button a {
+.header-botones {
   display: flex;
   align-items: center;
-  gap: 5px;
-  color: white;
+  gap: 8px;
+}
+
+.btn-login {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   font-size: 14px;
+  color: #5d6463;
+  padding: 10px 16px;
+  border-radius: 20px;
+}
+
+.btn-registro {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  background-color: #36bba7;
+  padding: 12px 22px;
+  border-radius: 20px;
 }
 
 /*FOOTER*/

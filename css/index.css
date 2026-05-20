@@ -44,8 +44,7 @@ main {
 }
 
 .boton-principal {
-  display: inline-block;
-  width: fit-content;
+  width: 134px;
   padding: 14px 28px;
   background-color: #ffffff;
   color: #36bba7;
