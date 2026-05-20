@@ -1,4 +1,6 @@
-/*BODY GLOBAL*/
+/* -------------------- */
+/*     GLOBAL BODY      */
+/* -------------------- */
 
 body {
   margin: 0;
@@ -17,7 +19,9 @@ a {
   height: 20px;
 }
 
-/*HEADER*/
+/* -------------------- */
+/*       HEADER         */
+/* -------------------- */
 
 header {
   display: flex;
@@ -35,7 +39,9 @@ header {
   font-size: 20px;
 }
 
-/*NAV*/
+/* -------------------- */
+/*         NAV          */
+/* -------------------- */
 
 .nav {
   display: flex;
@@ -62,9 +68,11 @@ header {
   color: #36bba7;
 }
 
-/*BOTÓN*/
+/* -------------------- */
+/*    HEADER BUTTONS    */
+/* -------------------- */
 
-.header-botones {
+.header-actions {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -79,7 +87,7 @@ header {
   border-radius: 20px;
 }
 
-.btn-registro {
+.btn-register {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -89,7 +97,9 @@ header {
   border-radius: 20px;
 }
 
-/*FOOTER*/
+/* -------------------- */
+/*       FOOTER         */
+/* -------------------- */
 
 .footer {
   background-color: #1a2e2b;
@@ -97,7 +107,7 @@ header {
   margin-top: 0;
 }
 
-.footer-contenido {
+.footer-content {
   width: auto;
   margin: 0 auto;
   display: flex;
@@ -106,13 +116,13 @@ header {
   gap: 40px;
 }
 
-.footer-columna {
+.footer-col {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.footer-columna h4 {
+.footer-col h4 {
   font-size: 13px;
   font-weight: 700;
   color: #36bba7;
@@ -121,18 +131,18 @@ header {
   margin-bottom: 4px;
 }
 
-.footer-columna a {
+.footer-col a {
   color: #a0b3b0;
   font-size: 14px;
   transition: color 0.25s ease;
 }
 
-.redes-sociales {
+.footer-social {
   display: flex;
   gap: 12px;
 }
 
-.footer-columna i {
+.footer-col i {
   font-size: 18px;
   color: #a0b3b0;
 }
