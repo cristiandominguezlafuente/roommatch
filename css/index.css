@@ -51,9 +51,6 @@ main {
   font-weight: 700;
   border-radius: 25px;
   font-size: 15px;
-  transition:
-    background-color 0.25s ease,
-    color 0.25s ease;
 }
 
 .boton-principal:hover {
