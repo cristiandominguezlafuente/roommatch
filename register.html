@@ -18,45 +18,32 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
+  <body class="contenedor-register">
+    <div class="register-caja">
+      <h1>Crear cuenta</h1>
+      <p class="subtitulo">Únete a la comunidad de RoomMatch</p>
 
-  <body class="register-page">
-    <div class="register-card">
-      <div class="register-icon-wrap">
-        <i class="fa-solid fa-user-plus"></i>
-      </div>
+      <form action="#" method="post">
+        <label for="reg-name">Nombre completo</label>
+        <input
+          id="reg-name"
+          type="text"
+          placeholder="John Doe"
+          autocomplete="name"
+          required
+        />
 
-      <p class="register-brand">RoomMatch</p>
-      <h1 class="register-title">Crear cuenta</h1>
-      <p class="register-subtitle">Únete a la comunidad de RoomMatch</p>
+        <label for="reg-email">Correo electrónico</label>
+        <input
+          id="reg-email"
+          type="email"
+          placeholder="ejemplo@correo.com"
+          autocomplete="email"
+          required
+        />
 
-      <form class="register-form" action="#" method="post">
-        <label class="form-label" for="reg-name">Nombre completo</label>
-        <div class="form-field">
-          <i class="fa-solid fa-user"></i>
-          <input
-            id="reg-name"
-            type="text"
-            placeholder="John Doe"
-            autocomplete="name"
-            required
-          />
-        </div>
-
-        <label class="form-label" for="reg-email">Correo electrónico</label>
-        <div class="form-field">
-          <i class="fa-solid fa-envelope"></i>
-          <input
-            id="reg-email"
-            type="email"
-            placeholder="ejemplo@correo.com"
-            autocomplete="email"
-            required
-          />
-        </div>
-
-        <label class="form-label" for="reg-pass">Contraseña</label>
-        <div class="form-field">
-          <i class="fa-solid fa-lock"></i>
+        <label for="reg-pass">Contraseña</label>
+        <div class="campo-pass">
           <input
             id="reg-pass"
             type="password"
@@ -92,10 +79,12 @@
         </button>
       </div>
 
-      <p class="register-footer">
+      <p class="login-link">
         ¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a>
       </p>
     </div>
+
+    <script src="js/register.js"></script>
   </body>
   <script src="js/register.js"></script>
 </html>

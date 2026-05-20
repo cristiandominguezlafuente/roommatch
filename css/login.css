@@ -115,6 +115,7 @@ input:focus {
 }
 
 .registro a {
+  text-decoration: none;
   color: #36bba7;
   font-weight: 700;
 }
