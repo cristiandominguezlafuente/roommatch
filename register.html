@@ -44,19 +44,8 @@
 
         <label for="reg-pass">Contraseña</label>
         <div class="campo-pass">
-          <input
-            id="reg-pass"
-            type="password"
-            placeholder="••••••••"
-            autocomplete="new-password"
-            required
-          />
-          <button
-            type="button"
-            class="btn-toggle-pass"
-            onclick="togglePass()"
-            aria-label="Mostrar contraseña"
-          >
+          <input type="password" placeholder="••••••••" />
+          <button class="btn-toggle-pass">
             <i class="fa-solid fa-eye" id="eye-icon"></i>
           </button>
         </div>
@@ -84,7 +73,5 @@
       </p>
     </div>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/supabase-config.js"></script>
   <script src="js/register.js"></script>
 </html>
