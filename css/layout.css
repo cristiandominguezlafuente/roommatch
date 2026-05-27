@@ -68,6 +68,12 @@ header {
   color: #36bba7;
 }
 
+.nav a.activo {
+  background-color: #f0fdfb;
+  color: #36bba7;
+  font-weight: 700;
+}
+
 /* -------------------- */
 /*    HEADER BUTTONS    */
 /* -------------------- */
@@ -86,6 +92,12 @@ header {
   background-color: #36bba7;
   padding: 12px 22px;
   border-radius: 20px;
+  transition: background-color 0.25s ease;
+}
+
+.btn-login:hover {
+  background-color: #1a2e2b;
+  color: white;
 }
 
 /* -------------------- */
@@ -128,6 +140,10 @@ header {
   transition: color 0.25s ease;
 }
 
+.footer-col a:hover {
+  color: #ffffff;
+}
+
 .footer-social {
   display: flex;
   gap: 12px;
@@ -136,6 +152,12 @@ header {
 .footer-col i {
   font-size: 18px;
   color: #a0b3b0;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.footer-col i:hover {
+  color: #36bba7;
 }
 
 .footer-copy {
