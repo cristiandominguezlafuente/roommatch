@@ -120,3 +120,36 @@ main {
   border-color: #36bba7;
   color: white;
 }
+
+/*Animacion match*/
+
+.icono-match {
+  position: fixed;
+  font-size: 80px;
+  z-index: 100;
+  pointer-events: none;
+  animation: subirCrecer 0.7s ease forwards;
+}
+
+.icono-match.like {
+  color: #36bba7;
+}
+
+.icono-match.nope {
+  color: #f26b9f;
+}
+
+@keyframes subirCrecer {
+  0% {
+    transform: translateY(0px) scale(0.5);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-300px) scale(2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-420px) scale(2.5);
+    opacity: 0;
+  }
+}
