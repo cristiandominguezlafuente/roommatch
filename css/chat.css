@@ -20,8 +20,11 @@
 }
 
 .chats-cabecera {
+  display: flex;
+  align-items: center;
   padding: 24px 20px 16px;
   border-bottom: 1px solid #e2eded;
+  border-top: 1px solid #e2eded;
 }
 
 .chats-cabecera h2 {
