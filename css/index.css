@@ -205,11 +205,6 @@ main {
     transform 0.25s ease;
 }
 
-.step:hover .step-num {
-  background-color: #1a2e2b;
-  transform: scale(1.1);
-}
-
 .step h3 {
   font-size: 17px;
   font-weight: 700;

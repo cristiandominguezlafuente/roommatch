@@ -209,3 +209,7 @@ input:focus {
   font-weight: 700;
   text-decoration: none;
 }
+
+.login-link a:hover {
+  color: #1a2e2b;
+}

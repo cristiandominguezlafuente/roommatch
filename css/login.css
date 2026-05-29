@@ -74,11 +74,16 @@ input {
   color: #1a2e2b;
   background-color: #f9fefe;
   box-sizing: border-box;
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease;
 }
 
 input:focus {
   border-color: #36bba7;
   background-color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(54, 187, 167, 0.12);
 }
 
 /* -------------------- */
@@ -97,6 +102,11 @@ input:focus {
   border-radius: 20px;
   cursor: pointer;
   margin-top: 10px;
+  transition: background-color 0.25s ease;
+}
+
+.boton-login:hover {
+  background-color: #1a2e2b;
 }
 
 .boton-login a {
@@ -118,4 +128,9 @@ input:focus {
   text-decoration: none;
   color: #36bba7;
   font-weight: 700;
+  transition: color 0.25s ease;
+}
+
+.registro a:hover {
+  color: #1a2e2b;
 }
