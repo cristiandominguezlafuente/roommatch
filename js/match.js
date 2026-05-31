@@ -1,8 +1,4 @@
-// ─────────────────────────────────────────
-// 1. LISTA DE PERSONAS
-// ─────────────────────────────────────────
-
-// Un array es una lista. Cada {} es una persona con sus datos.
+// Lista de personas que se mostrarán en las cartas
 const personas = [
   {
     nombre: "Daniel, 18",
@@ -30,228 +26,84 @@ const personas = [
   },
 ];
 
-// Esta variable guarda qué persona estamos viendo ahora (empieza en 0 = la primera)
-let actual = 0;
+// Índice de la persona que se muestra ahora (0 = la primera)
+var actual = 0;
 
-// Estas dos guardan la posición del ratón cuando hacemos drag
-let startX = 0; // dónde empezó el clic
-let currentX = 0; // cuánto se ha movido desde el inicio
-
-// Evita que se lancen dos iconos a la vez
-let iconoActivo = false;
-
-// ─────────────────────────────────────────
-// 2. FUNCIÓN: mostrarPersona
 // Actualiza la carta con los datos de la persona actual
-// ─────────────────────────────────────────
-
 function mostrarPersona() {
   // Coge la persona del array según el índice actual
-  const p = personas[actual];
+  var p = personas[actual];
 
-  // Selecciona cada elemento HTML de la carta
-  const img = document.querySelector(".carta-foto img"); // la foto
-  const nombre = document.querySelector(".carta-info h3"); // el nombre
-  const zona = document.querySelector(".carta-zona"); // la zona
-  const desc = document.querySelector(".carta-info p"); // la descripción
+  // Selecciona los elementos HTML de la carta
+  var img = document.querySelector(".carta-foto img");
+  var nombre = document.querySelector(".carta-info h3");
+  var zona = document.querySelector(".carta-zona");
+  var desc = document.querySelector(".carta-info p");
 
-  // Si algún elemento no existe en el HTML, para aquí y no hace nada
+  // Si algún elemento no existe, no hace nada
   if (!img || !nombre || !zona || !desc) return;
 
-  // Actualiza el contenido de cada elemento con los datos de la persona
+  // Rellena la carta con los datos de la persona
   img.src = p.foto;
   nombre.textContent = p.nombre;
   zona.textContent = p.zona;
   desc.textContent = p.desc;
 
-  // Devuelve la carta a su posición original (centrada, sin rotación)
-  const carta = document.querySelector(".carta");
+  // Devuelve la carta al centro sin rotación
+  var carta = document.querySelector(".carta");
   carta.style.transform = "translateX(0) rotate(0)";
-  carta.style.transition = "transform 0.3s ease"; // animación suave de 0.3s
+  carta.style.transition = "transform 0.3s ease";
 }
 
-// ─────────────────────────────────────────
-// 3. FUNCIÓN: lanzarIcono
-// Crea un ♥ o ✕ que sube desde la carta y desaparece
-// ─────────────────────────────────────────
-
-function lanzarIcono(tipo) {
-  // Crea un nuevo <div> en el HTML
-  const icono = document.createElement("div");
-
-  // Le añade las clases CSS para que tenga estilo y animación
-  icono.classList.add("icono-match", tipo); // tipo = "like" o "nope"
-
-  // Escribe el símbolo dentro del div según el tipo
-  icono.textContent = tipo === "like" ? "♥" : "✕";
-
-  // Calcula la posición central de la carta para colocar el icono ahí
-  const carta = document.querySelector(".carta");
-  const rect = carta.getBoundingClientRect(); // obtiene posición y tamaño de la carta
-  icono.style.left = rect.left + rect.width / 2 - 40 + "px"; // centrado horizontal
-  icono.style.top = rect.top + rect.height / 2 + "px"; // centrado vertical
-
-  // Añade el icono al body para que se vea
-  document.body.appendChild(icono);
-
-  // Cuando la animación CSS termina, borra el icono y permite lanzar otro
-  icono.addEventListener("animationend", () => {
-    icono.remove(); // lo elimina del HTML
-    iconoActivo = false; // permite volver a lanzar iconos
-  });
-}
-
-// ─────────────────────────────────────────
-// 4. FUNCIÓN: siguiente
-// Pasa a la siguiente persona o muestra el mensaje final
-// ─────────────────────────────────────────
-
+// Pasa a la siguiente persona del array
 function siguiente() {
-  // Suma 1 al índice para ir a la siguiente persona
+  // Suma 1 al índice
   actual++;
 
   if (actual < personas.length) {
-    // Si todavía quedan personas, muestra la siguiente
+    // Si quedan personas, muestra la siguiente
     mostrarPersona();
   } else {
-    // Si ya no quedan más, muestra este mensaje en el contenedor
-    document.querySelector(".lista-match").innerHTML = `
-      <div style="text-align:center; padding: 60px 0; color: #5d6463;">
-        <i class="fa-solid fa-heart" style="font-size: 48px; color: #36bba7; margin-bottom: 16px; display:block;"></i>
-        <p style="font-size: 18px; font-weight: 700;">No hay más personas por ahora</p>
-        <p style="font-size: 14px;">Vuelve más tarde para ver nuevos perfiles</p>
-      </div>
-    `;
-    // Oculta los botones ♥ y ✕
+    // Si no quedan más, muestra un mensaje y oculta los botones
+    document.querySelector(".lista-match").innerHTML =
+      '<div style="text-align:center; padding: 60px 0; color: #5d6463;">' +
+      '<i class="fa-solid fa-heart" style="font-size: 48px; color: #36bba7; margin-bottom: 16px; display:block;"></i>' +
+      '<p style="font-size: 18px; font-weight: 700;">No hay más personas por ahora</p>' +
+      '<p style="font-size: 14px;">Vuelve más tarde para ver nuevos perfiles</p>' +
+      "</div>";
+
+    // Oculta los botones de like y nope
     document.querySelector(".acciones").style.display = "none";
   }
 }
 
-// ─────────────────────────────────────────
-// 5. BOTÓN ♥ (like)
-// ─────────────────────────────────────────
+// Función que se ejecuta al pulsar like
+function clickLike() {
+  var carta = document.querySelector(".carta");
 
-document.querySelector(".btn-si").addEventListener("click", () => {
-  lanzarIcono("like"); // lanza el corazón animado
-
-  const carta = document.querySelector(".carta");
-  carta.style.transform = "translateX(1000px) rotate(30deg)"; // mueve la carta a la derecha
-  carta.style.transition = "transform 0.4s ease"; // en 0.4 segundos
-
-  // Espera a que termine la animación y pasa a la siguiente persona
-  setTimeout(() => {
-    siguiente();
-  }, 400); // 400ms = mismo tiempo que la animación
-});
-
-// ─────────────────────────────────────────
-// 6. BOTÓN ✕ (nope)
-// ─────────────────────────────────────────
-
-document.querySelector(".btn-no").addEventListener("click", () => {
-  lanzarIcono("nope"); // lanza la X animada
-
-  const carta = document.querySelector(".carta");
-  carta.style.transform = "translateX(-1000px) rotate(-30deg)"; // mueve la carta a la izquierda
+  // Mueve la carta fuera de la pantalla a la derecha con rotación
+  carta.style.transform = "translateX(1000px) rotate(30deg)";
   carta.style.transition = "transform 0.4s ease";
 
-  setTimeout(() => {
-    siguiente();
-  }, 400);
-});
-
-// ─────────────────────────────────────────
-// 7. ARRASTRAR CON EL RATÓN (drag & swipe)
-// ─────────────────────────────────────────
-
-const carta = document.querySelector(".carta");
-
-// Cuando el usuario hace clic en la carta
-carta.addEventListener("mousedown", (e) => {
-  startX = e.clientX; // guarda en qué posición X del monitor se hizo clic
-
-  // Activa los otros dos eventos mientras el botón esté pulsado
-  document.addEventListener("mousemove", mover);
-  document.addEventListener("mouseup", soltar);
-});
-
-// Se ejecuta mientras se mueve el ratón (con el botón pulsado)
-function mover(e) {
-  // Calcula cuántos píxeles se ha movido desde el inicio
-  currentX = e.clientX - startX;
-
-  const carta = document.querySelector(".carta");
-
-  // Mueve y rota la carta según el desplazamiento (0.05 = rotación suave)
-  carta.style.transform = `translateX(${currentX}px) rotate(${currentX * 0.05}deg)`;
-  carta.style.transition = "none"; // sin animación mientras arrastramos
-
-  // Si se ha movido más de 30px a la derecha → like
-  if (currentX > 30) {
-    carta.classList.add("derecha");
-    carta.classList.remove("izquierda");
-    if (!iconoActivo) {
-      // solo lanza icono si no hay uno ya
-      iconoActivo = true;
-      lanzarIcono("like");
-    }
-
-    // Si se ha movido más de 30px a la izquierda → nope
-  } else if (currentX < -30) {
-    carta.classList.add("izquierda");
-    carta.classList.remove("derecha");
-    if (!iconoActivo) {
-      iconoActivo = true;
-      lanzarIcono("nope");
-    }
-
-    // Si está cerca del centro → quita los efectos visuales
-  } else {
-    carta.classList.remove("derecha", "izquierda");
-    iconoActivo = false;
-  }
+  // Espera 400ms a que termine la animación y pasa a la siguiente
+  setTimeout(siguiente, 400);
 }
 
-// Se ejecuta cuando se suelta el botón del ratón
-function soltar() {
-  // Desactiva los eventos de movimiento y soltar
-  document.removeEventListener("mousemove", mover);
-  document.removeEventListener("mouseup", soltar);
+// Función que se ejecuta al pulsar nope
+function clickNope() {
+  var carta = document.querySelector(".carta");
 
-  const carta = document.querySelector(".carta");
+  // Mueve la carta fuera de la pantalla a la izquierda con rotación
+  carta.style.transform = "translateX(-1000px) rotate(-30deg)";
+  carta.style.transition = "transform 0.4s ease";
 
-  if (currentX > 100) {
-    // Se soltó bien a la derecha → confirmar like
-    lanzarIcono("like");
-    carta.style.transform = "translateX(1000px) rotate(30deg)";
-    carta.style.transition = "transform 0.4s ease";
-    setTimeout(() => {
-      siguiente();
-    }, 400);
-  } else if (currentX < -100) {
-    // Se soltó bien a la izquierda → confirmar nope
-    lanzarIcono("nope");
-    carta.style.transform = "translateX(-1000px) rotate(-30deg)";
-    carta.style.transition = "transform 0.4s ease";
-    setTimeout(() => {
-      siguiente();
-    }, 400);
-  } else {
-    // No llegó a 100px → vuelve al centro (como si no hubiera pasado nada)
-    carta.style.transform = "translateX(0) rotate(0)";
-    carta.style.transition = "transform 0.3s ease";
-    carta.classList.remove("derecha", "izquierda");
-    iconoActivo = false;
-  }
-
-  // Resetea los valores para el próximo drag
-  currentX = 0;
-  carta.classList.remove("derecha", "izquierda");
+  // Espera 400ms a que termine la animación y pasa a la siguiente
+  setTimeout(siguiente, 400);
 }
 
-// ─────────────────────────────────────────
-// 8. INICIO
-// Muestra la primera persona al cargar la página
-// ─────────────────────────────────────────
+// Asigna los eventos a los botones
+document.querySelector(".btn-si").addEventListener("click", clickLike);
+document.querySelector(".btn-no").addEventListener("click", clickNope);
 
+// Carga la primera persona al iniciar la página
 mostrarPersona();
