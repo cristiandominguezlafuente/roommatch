@@ -6,8 +6,8 @@
 
 ## 2. Integrantes del proyecto
 
-- **Cristian Domínguez**: Desarrollador Frontend y Diseñador de Interfaz
-- **Daniel Puente**: Desarrollador Frontend y Gestión de Base de Datos
+- **Cristian Domínguez**: Desarrollador Frontend y diseñador de la app web
+- **Daniel Puente**: Desarrollador Frontend y creador de la base de datos
 
 ## 3. Objetivos
 
