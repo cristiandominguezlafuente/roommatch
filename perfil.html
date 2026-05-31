@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tu Perfil — RoomMatch</title>
     <link rel="icon" sizes="64x64" href="img/assets/logo-roommatch.png" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/perfil.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/perfil.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +23,6 @@
       <div class="logo">
         <a href="index.html">RoomMatch</a>
       </div>
-
       <nav class="nav">
         <a href="index.html">
           <svg
@@ -42,7 +41,6 @@
           </svg>
           Inicio
         </a>
-
         <a href="match.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +58,6 @@
           </svg>
           Match
         </a>
-
         <a href="chat.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +75,6 @@
           </svg>
           Chat
         </a>
-
         <a href="perfil.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -97,28 +93,18 @@
           Perfil
         </a>
       </nav>
-
       <div class="header-actions">
         <a href="login.html" class="btn-login">Iniciar Sesión</a>
       </div>
     </header>
 
-    <main class="panel">
-      <!-- PORTADA -->
-      <div class="portada">
-        <div class="fondo"></div>
-        <button class="btn-portada">
-          <i class="fa-solid fa-camera"></i> Editar perfil
-        </button>
-      </div>
-
-      <!-- USUARIO -->
-      <div class="usuario">
-        <div class="avatar">
+    <main class="contenido">
+      <div class="perfil-usuario">
+        <div class="foto-usuario">
           <img src="img/personas/daniel.png" alt="Avatar" />
-          <button class="btn-avatar"><i class="fa-solid fa-camera"></i></button>
+          <button class="btn-foto"><i class="fa-solid fa-camera"></i></button>
         </div>
-        <div class="nombre">
+        <div class="datos-usuario">
           <h1>
             Daniel Puente
             <span class="verificado"
@@ -129,36 +115,33 @@
         </div>
       </div>
 
-      <!-- CUADRÍCULA -->
-      <div class="cuadricula">
-        <aside class="lateral">
-          <div class="tarjeta">
-            <div class="cabecera">
-              <div class="icono"><i class="fa-solid fa-user"></i></div>
+      <div class="columnas">
+        <aside class="columna-izq">
+          <div class="bloque">
+            <div class="bloque-titulo">
+              <div class="icono-bloque"><i class="fa-solid fa-user"></i></div>
               <h3>Sobre mí</h3>
             </div>
-            <p class="bio">
+            <p class="descripcion">
               Estudiante de informatica, amante de la fiesta y de los
               videojuegos. Busco piso tranquilo cerca de Badalona. Fumo y tengo
               horarios estables.
             </p>
-            <div class="etiquetas">
-              <span class="etiqueta">Gamer 🎮</span>
-              <span class="etiqueta">Fútbol ⚽</span>
-              <span class="etiqueta">Fiesta 🪩🍸</span>
-              <span class="etiqueta">Pájaros 🐦</span>
-              <div class="etiqueta-añadir-mas">
-                <span>Añadir más +</span>
-              </div>
+            <div class="tags">
+              <span class="tag">Gamer 🎮</span>
+              <span class="tag">Fútbol ⚽</span>
+              <span class="tag">Fiesta 🪩🍸</span>
+              <span class="tag">Pájaros 🐦</span>
+              <div class="tag-añadir"><span>Añadir más +</span></div>
             </div>
           </div>
 
-          <div class="tarjeta">
-            <div class="cabecera">
-              <div class="icono"><i class="fa-solid fa-house"></i></div>
+          <div class="bloque">
+            <div class="bloque-titulo">
+              <div class="icono-bloque"><i class="fa-solid fa-house"></i></div>
               <h3>Preferencias</h3>
             </div>
-            <ul class="lista">
+            <ul class="preferencias">
               <li>
                 <i class="fa-solid fa-euro-sign"></i> Presupuesto:
                 <strong>400 – 650 €/mes</strong>
@@ -187,134 +170,136 @@
           </div>
         </aside>
 
-        <section class="principal">
-          <div class="stats">
-            <div class="stat">
-              <span class="numero">34</span>
-              <span class="label">Matches</span>
+        <section class="columna-der">
+          <div class="estadisticas">
+            <div class="estadistica">
+              <span class="cifra">34</span>
+              <span class="texto-stat">Matches</span>
             </div>
-            <div class="stat">
-              <span class="numero">12</span>
-              <span class="label">Favoritos</span>
+            <div class="estadistica">
+              <span class="cifra">12</span>
+              <span class="texto-stat">Favoritos</span>
             </div>
-            <div class="stat">
-              <span class="numero"
+            <div class="estadistica">
+              <span class="cifra"
                 >4.9 <i class="fa-solid fa-star estrella"></i
               ></span>
-              <span class="label">Valoración</span>
+              <span class="texto-stat">Valoración</span>
             </div>
-            <div class="stat">
-              <span class="numero">98%</span>
-              <span class="label">Perfil completo</span>
+            <div class="estadistica">
+              <span class="cifra">98%</span>
+              <span class="texto-stat">Perfil completo</span>
             </div>
           </div>
 
-          <div class="tarjeta">
-            <div class="cabecera">
-              <div class="icono"><i class="fa-solid fa-chart-simple"></i></div>
+          <div class="bloque">
+            <div class="bloque-titulo">
+              <div class="icono-bloque">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
               <h3>Completitud del perfil</h3>
             </div>
-            <div class="barra-progreso">
-              <div class="progreso" style="width: 98%"></div>
+            <div class="progreso-barra">
+              <div class="progreso-relleno" style="width: 98%"></div>
             </div>
-            <p class="aviso">
+            <p class="progreso-texto">
               ¡Casi perfecto! Solo falta añadir una foto de portada.
             </p>
-            <div class="checks">
-              <div class="check hecho">
+            <div class="lista-checks">
+              <div class="check-item hecho">
                 <i class="fa-solid fa-circle-check"></i> Foto de perfil
               </div>
-              <div class="check hecho">
+              <div class="check-item hecho">
                 <i class="fa-solid fa-circle-check"></i> Descripción personal
               </div>
-              <div class="check hecho">
+              <div class="check-item hecho">
                 <i class="fa-solid fa-circle-check"></i> Preferencias de piso
               </div>
-              <div class="check hecho">
+              <div class="check-item hecho">
                 <i class="fa-solid fa-circle-check"></i> Rango de presupuesto
               </div>
-              <div class="check pendiente">
+              <div class="check-item pendiente">
                 <i class="fa-regular fa-circle"></i> Foto de portada
               </div>
             </div>
           </div>
 
-          <div class="tarjeta">
-            <div class="cabecera">
-              <div class="icono">
+          <div class="bloque">
+            <div class="bloque-titulo">
+              <div class="icono-bloque">
                 <i class="fa-solid fa-clock-rotate-left"></i>
               </div>
               <h3>Actividad reciente</h3>
             </div>
-            <div class="actividad">
-              <div class="fila">
-                <div class="punto verde"></div>
-                <div class="texto">
+            <div class="lista-actividad">
+              <div class="actividad-fila">
+                <div class="actividad-punto verde"></div>
+                <div class="actividad-texto">
                   <p><strong>Nuevo match</strong> con Piso en Gràcia</p>
                   <small>Hace 2 horas</small>
                 </div>
-                <span class="badge verde-badge">Match</span>
+                <span class="etiqueta-tipo verde-badge">Match</span>
               </div>
-              <div class="fila">
-                <div class="punto rosa"></div>
-                <div class="texto">
+              <div class="actividad-fila">
+                <div class="actividad-punto rosa"></div>
+                <div class="actividad-texto">
                   <p><strong>Guardaste</strong> un anuncio en Eixample</p>
                   <small>Hace 5 horas</small>
                 </div>
-                <span class="badge rosa-badge">Favorito</span>
+                <span class="etiqueta-tipo rosa-badge">Favorito</span>
               </div>
-              <div class="fila">
-                <div class="punto naranja"></div>
-                <div class="texto">
+              <div class="actividad-fila">
+                <div class="actividad-punto naranja"></div>
+                <div class="actividad-texto">
                   <p><strong>Nuevo mensaje</strong> de Carlos R.</p>
                   <small>Ayer</small>
                 </div>
-                <span class="badge naranja-badge">Mensaje</span>
+                <span class="etiqueta-tipo naranja-badge">Mensaje</span>
               </div>
-              <div class="fila">
-                <div class="punto verde"></div>
-                <div class="texto">
+              <div class="actividad-fila">
+                <div class="actividad-punto verde"></div>
+                <div class="actividad-texto">
                   <p><strong>Nuevo match</strong> con Piso en Poblenou</p>
                   <small>Hace 2 días</small>
                 </div>
-                <span class="badge verde-badge">Match</span>
+                <span class="etiqueta-tipo verde-badge">Match</span>
               </div>
             </div>
           </div>
 
-          <div class="tarjeta">
-            <div class="cabecera">
-              <div class="icono"><i class="fa-solid fa-heart"></i></div>
+          <div class="bloque">
+            <div class="bloque-titulo">
+              <div class="icono-bloque"><i class="fa-solid fa-heart"></i></div>
               <h3>Pisos guardados</h3>
-              <a href="favoritos.html" class="ver-todos">Ver todos →</a>
+              <a href="favoritos.html" class="enlace-ver-mas">Ver todos →</a>
             </div>
-            <div class="pisos">
-              <div class="piso">
-                <div class="imagen">
+            <div class="lista-pisos">
+              <div class="piso-card">
+                <div class="piso-imagen">
                   <img src="img/pisos/piso-barcelona-1.png" alt="Piso 1" />
-                  <span class="precio">975€/mes</span>
+                  <span class="piso-precio">975€/mes</span>
                 </div>
-                <div class="info">
+                <div class="piso-info">
                   <strong>Piso en Gràcia</strong>
                   <small>2 hab · 65 m²</small>
                 </div>
               </div>
-              <div class="piso">
-                <div class="imagen">
+              <div class="piso-card">
+                <div class="piso-imagen">
                   <img src="img/pisos/piso-badalona-2.png" alt="Piso 2" />
-                  <span class="precio">490€/mes</span>
+                  <span class="piso-precio">490€/mes</span>
                 </div>
-                <div class="info">
+                <div class="piso-info">
                   <strong>Piso en Sistrells</strong>
                   <small>3 hab · 80 m²</small>
                 </div>
               </div>
-              <div class="piso">
-                <div class="imagen">
+              <div class="piso-card">
+                <div class="piso-imagen">
                   <img src="img/pisos/piso-barcelona-3.png" alt="Piso 3" />
-                  <span class="precio">810€/mes</span>
+                  <span class="piso-precio">810€/mes</span>
                 </div>
-                <div class="info">
+                <div class="piso-info">
                   <strong>Piso en Barrio Gótico</strong>
                   <small>4 hab · 95 m²</small>
                 </div>
