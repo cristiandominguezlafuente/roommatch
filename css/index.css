@@ -1,15 +1,4 @@
 /* -------------------- */
-/*       PRINCIPAL      */
-/* -------------------- */
-
-principal {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  padding-bottom: 0;
-}
-
-/* -------------------- */
 /*       PORTADA        */
 /* -------------------- */
 
@@ -207,7 +196,7 @@ principal {
 
 /* Botón Premium */
 .btn-premium {
-  width: fit-content;
+  width: 100px;
   padding: 14px 32px;
   background-color: #1a2e2b;
   color: #ffffff;
@@ -230,7 +219,6 @@ principal {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  flex-grow: 1;
 }
 
 .tarjeta-ventaja {
@@ -262,7 +250,6 @@ principal {
   justify-content: center;
   color: #36bba7;
   font-size: 18px;
-  flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
@@ -358,7 +345,6 @@ principal {
   height: 2px;
   background-color: #e2eded;
   margin-top: 28px;
-  flex-shrink: 0;
 }
 
 /* -------------------- */
