@@ -1,0 +1,209 @@
+/* ==========================================================================
+   HOJA DE ESTILOS: premium.css (Simplificada)
+   ========================================================================== */
+
+.seccion-principal-premium {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8fbfb;
+  color: #1a2e2b;
+  padding-bottom: 80px;
+}
+
+/* -------------------- */
+/* PRESENTACIÓN / HERO  */
+/* -------------------- */
+.bloque-presentacion {
+  text-align: center;
+  padding: 90px 20px 130px;
+  background: linear-gradient(135deg, #1a2e2b 0%, #36bba7 100%);
+  color: #ffffff;
+}
+
+.etiqueta-llamativa {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #a0f5e8;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 18px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(160, 245, 232, 0.3);
+}
+
+.bloque-presentacion h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.bloque-presentacion p {
+  font-size: 17px;
+  max-width: 620px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+/* -------------------- */
+/* TARIFAS Y PRECIOS    */
+/* -------------------- */
+.zona-tarifas {
+  padding: 0 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grupo-tarifas {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: -85px; /* Ajuste flotante sobre el fondo oscuro */
+}
+
+.bloque-tarifa {
+  background-color: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2eded;
+  width: 340px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(26, 46, 43, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloque-tarifa:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(54, 187, 167, 0.12);
+}
+
+/* Variación tarjeta recomendada */
+.bloque-tarifa.tarifa-recomendada {
+  border: 2px solid #36bba7;
+  transform: scale(1.03);
+}
+
+.bloque-tarifa.tarifa-recomendada:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.cartel-recomendado {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #36bba7;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 6px 18px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Cabecera interna */
+.parte-superior-tarifa {
+  text-align: center;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #f0f5f5;
+  padding-bottom: 24px;
+}
+
+.parte-superior-tarifa h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #1a2e2b;
+}
+
+.texto-explicativo {
+  font-size: 14px;
+  color: #5d6463;
+  margin: 0 0 20px 0;
+}
+
+.numero-precio {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1a2e2b;
+}
+
+.numero-precio span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #5d6463;
+}
+
+/* Listas de puntos */
+.lista-caracteristicas {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px 0;
+  flex-grow: 1;
+}
+
+.lista-caracteristicas li {
+  font-size: 14px;
+  color: #4a5150;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.4;
+}
+
+.lista-caracteristicas li strong {
+  color: #1a2e2b;
+}
+
+.icono-si {
+  color: #36bba7;
+  font-size: 15px;
+  width: 16px;
+}
+
+.icono-no {
+  color: #c4d9d6;
+  font-size: 14px;
+  width: 16px;
+}
+
+/* Botones */
+.boton-tarifa {
+  display: block;
+  text-align: center;
+  padding: 14px 24px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.boton-gris {
+  background-color: #f0fdfb;
+  color: #36bba7;
+  border: 1px solid #36bba7;
+}
+
+.boton-gris:hover {
+  background-color: #36bba7;
+  color: #ffffff;
+}
+
+.boton-verde {
+  background-color: #36bba7;
+  color: #ffffff;
+}
+
+.boton-verde:hover {
+  background-color: #1a2e2b;
+}
