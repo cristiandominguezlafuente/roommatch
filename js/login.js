@@ -13,8 +13,8 @@ document.querySelector(".boton-login").addEventListener("click", function () {
 
     // Para la función aquí, no continúa
     return;
+  } else {
+    // Si los dos campos están rellenos, redirige al perfil
+    window.location.href = "perfil.html";
   }
-
-  // Si los dos campos están rellenos, redirige al perfil
-  window.location.href = "perfil.html";
 });
