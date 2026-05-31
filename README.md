@@ -91,7 +91,7 @@ _[Insertar imagen del diagrama de Gantt]_
 - Google Fonts (Montserrat): https://fonts.google.com
 - Referencia de CSS en MDN: https://developer.mozilla.org/es/docs/Web/CSS
 - Referencia de JavaScript en MDN: https://developer.mozilla.org/es/docs/Web/JavaScript
-- Inspiración de diseño: Idealista, Tinder, RoomMatch (referencia externa)
+- Inspiración de diseño: Idealista, Tinder
 
 ## 9. Anexos
 
