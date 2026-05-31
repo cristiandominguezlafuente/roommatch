@@ -48,6 +48,8 @@ Inspirada en el funcionamiento de Tinder, la app permite al usuario ver perfiles
 - **Iconos**: Font Awesome 6.5 para los iconos de navegación y UI.
 - **Tipografía**: Google Fonts (Montserrat).
 - **Control de versiones**: Git y GitHub para el código.
+- **Diseño asistido por IA**: Google Stitch para la generación y prototipado de interfaces de usuario.
+- **Asistente de desarrollo IA**: Claude.ai para la resolución de dudas, generación de código y apoyo durante el desarrollo.
 
 ## 6. Desarrollo y despliegue
 
@@ -91,6 +93,8 @@ _[Insertar imagen del diagrama de Gantt]_
 - Google Fonts (Montserrat): https://fonts.google.com
 - Referencia de CSS en MDN: https://developer.mozilla.org/es/docs/Web/CSS
 - Referencia de JavaScript en MDN: https://developer.mozilla.org/es/docs/Web/JavaScript
+- Google Stitch: https://stitch.withgoogle.com
+- Claude.ai: https://claude.ai
 - Inspiración de diseño: Idealista, Tinder
 
 ## 9. Anexos
