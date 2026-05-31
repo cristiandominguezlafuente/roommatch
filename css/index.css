@@ -152,6 +152,140 @@ principal {
 }
 
 /* -------------------- */
+/*   SECCUIÓN PREMIUM   */
+/* -------------------- */
+
+.premium {
+  padding: 80px 120px;
+  background-color: #ffffff;
+}
+
+.premium-contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.premium-texto {
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.premium-etiqueta {
+  align-self: flex-start;
+  background-color: #f0fdfb;
+  color: #36bba7;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #a0f5e8;
+}
+
+.premium-texto h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #1a2e2b;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.premium-texto p {
+  font-size: 16px;
+  color: #5d6463;
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+/* Botón Premium */
+.btn-premium {
+  width: fit-content;
+  padding: 14px 32px;
+  background-color: #1a2e2b;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 25px;
+  font-size: 15px;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+  text-align: center;
+}
+
+.btn-premium:hover {
+  background-color: #36bba7;
+  transform: translateY(-2px);
+}
+
+/* Lista de ventajas */
+.premium-ventajas {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.tarjeta-ventaja {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background-color: #f0fdfb;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.tarjeta-ventaja:hover {
+  background-color: #ffffff;
+  border-color: #36bba7;
+  box-shadow: 0 8px 24px rgba(54, 187, 167, 0.08);
+}
+
+.ventaja-icono {
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #36bba7;
+  font-size: 18px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.tarjeta-ventaja:hover .ventaja-icono {
+  background-color: #36bba7;
+  color: #ffffff;
+}
+
+.ventaja-info h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a2e2b;
+}
+
+.ventaja-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #5d6463;
+  line-height: 1.5;
+}
+
+/* -------------------- */
 /*        PASOS         */
 /* -------------------- */
 
