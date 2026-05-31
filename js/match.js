@@ -1,3 +1,8 @@
+// ─────────────────────────────────────────
+// 1. LISTA DE PERSONAS
+// ─────────────────────────────────────────
+
+// Un array es una lista. Cada {} es una persona con sus datos.
 const personas = [
   {
     nombre: "Daniel, 18",
@@ -25,73 +30,91 @@ const personas = [
   },
 ];
 
-// índice de la persona que se muestra actualmente
+// Esta variable guarda qué persona estamos viendo ahora (empieza en 0 = la primera)
 let actual = 0;
 
-// posición inicial del ratón al hacer click
-let startX = 0;
+// Estas dos guardan la posición del ratón cuando hacemos drag
+let startX = 0; // dónde empezó el clic
+let currentX = 0; // cuánto se ha movido desde el inicio
 
-// cuánto se ha movido el ratón desde el inicio
-let currentX = 0;
-
-// controla que solo haya un icono animándose a la vez
+// Evita que se lancen dos iconos a la vez
 let iconoActivo = false;
 
-// crea el icono animado y lo lanza hacia arriba desde el centro de la carta
-function lanzarIcono(tipo) {
-  const icono = document.createElement("div");
-  icono.classList.add("icono-match", tipo);
-  icono.textContent = tipo === "like" ? "♥" : "✕";
+// ─────────────────────────────────────────
+// 2. FUNCIÓN: mostrarPersona
+// Actualiza la carta con los datos de la persona actual
+// ─────────────────────────────────────────
 
-  // lo coloca en el centro de la carta
-  const carta = document.querySelector(".carta");
-  const rect = carta.getBoundingClientRect();
-  icono.style.left = rect.left + rect.width / 2 - 40 + "px";
-  icono.style.top = rect.top + rect.height / 2 + "px";
-
-  document.body.appendChild(icono);
-
-  // lo elimina del DOM cuando termina la animación y resetea el control
-  icono.addEventListener("animationend", () => {
-    icono.remove();
-    iconoActivo = false;
-  });
-}
-
-// muestra los datos de la persona actual en la carta
 function mostrarPersona() {
+  // Coge la persona del array según el índice actual
   const p = personas[actual];
 
-  // selecciona los elementos del DOM
-  const img = document.querySelector(".carta-foto img");
-  const nombre = document.querySelector(".carta-info h3");
-  const zona = document.querySelector(".carta-zona");
-  const desc = document.querySelector(".carta-info p");
+  // Selecciona cada elemento HTML de la carta
+  const img = document.querySelector(".carta-foto img"); // la foto
+  const nombre = document.querySelector(".carta-info h3"); // el nombre
+  const zona = document.querySelector(".carta-zona"); // la zona
+  const desc = document.querySelector(".carta-info p"); // la descripción
 
-  // si algún elemento no existe, no hace nada
+  // Si algún elemento no existe en el HTML, para aquí y no hace nada
   if (!img || !nombre || !zona || !desc) return;
 
-  // actualiza los datos en pantalla
+  // Actualiza el contenido de cada elemento con los datos de la persona
   img.src = p.foto;
   nombre.textContent = p.nombre;
   zona.textContent = p.zona;
   desc.textContent = p.desc;
 
-  // resetea la posición de la carta al centro
+  // Devuelve la carta a su posición original (centrada, sin rotación)
   const carta = document.querySelector(".carta");
   carta.style.transform = "translateX(0) rotate(0)";
-  carta.style.transition = "transform 0.3s ease";
+  carta.style.transition = "transform 0.3s ease"; // animación suave de 0.3s
 }
 
-// pasa a la siguiente persona del array
+// ─────────────────────────────────────────
+// 3. FUNCIÓN: lanzarIcono
+// Crea un ♥ o ✕ que sube desde la carta y desaparece
+// ─────────────────────────────────────────
+
+function lanzarIcono(tipo) {
+  // Crea un nuevo <div> en el HTML
+  const icono = document.createElement("div");
+
+  // Le añade las clases CSS para que tenga estilo y animación
+  icono.classList.add("icono-match", tipo); // tipo = "like" o "nope"
+
+  // Escribe el símbolo dentro del div según el tipo
+  icono.textContent = tipo === "like" ? "♥" : "✕";
+
+  // Calcula la posición central de la carta para colocar el icono ahí
+  const carta = document.querySelector(".carta");
+  const rect = carta.getBoundingClientRect(); // obtiene posición y tamaño de la carta
+  icono.style.left = rect.left + rect.width / 2 - 40 + "px"; // centrado horizontal
+  icono.style.top = rect.top + rect.height / 2 + "px"; // centrado vertical
+
+  // Añade el icono al body para que se vea
+  document.body.appendChild(icono);
+
+  // Cuando la animación CSS termina, borra el icono y permite lanzar otro
+  icono.addEventListener("animationend", () => {
+    icono.remove(); // lo elimina del HTML
+    iconoActivo = false; // permite volver a lanzar iconos
+  });
+}
+
+// ─────────────────────────────────────────
+// 4. FUNCIÓN: siguiente
+// Pasa a la siguiente persona o muestra el mensaje final
+// ─────────────────────────────────────────
+
 function siguiente() {
+  // Suma 1 al índice para ir a la siguiente persona
   actual++;
 
   if (actual < personas.length) {
-    // si quedan personas, muestra la siguiente
+    // Si todavía quedan personas, muestra la siguiente
     mostrarPersona();
   } else {
-    // si no quedan más, muestra mensaje final
+    // Si ya no quedan más, muestra este mensaje en el contenedor
     document.querySelector(".lista-match").innerHTML = `
       <div style="text-align:center; padding: 60px 0; color: #5d6463;">
         <i class="fa-solid fa-heart" style="font-size: 48px; color: #36bba7; margin-bottom: 16px; display:block;"></i>
@@ -99,30 +122,37 @@ function siguiente() {
         <p style="font-size: 14px;">Vuelve más tarde para ver nuevos perfiles</p>
       </div>
     `;
-    // oculta los botones de acción
+    // Oculta los botones ♥ y ✕
     document.querySelector(".acciones").style.display = "none";
   }
 }
 
-// botón corazón: lanza el icono y la carta a la derecha
+// ─────────────────────────────────────────
+// 5. BOTÓN ♥ (like)
+// ─────────────────────────────────────────
+
 document.querySelector(".btn-si").addEventListener("click", () => {
-  lanzarIcono("like");
+  lanzarIcono("like"); // lanza el corazón animado
+
   const carta = document.querySelector(".carta");
+  carta.style.transform = "translateX(1000px) rotate(30deg)"; // mueve la carta a la derecha
+  carta.style.transition = "transform 0.4s ease"; // en 0.4 segundos
 
-  carta.style.transform = "translateX(1000px) rotate(30deg)";
-  carta.style.transition = "transform 0.4s ease";
-
+  // Espera a que termine la animación y pasa a la siguiente persona
   setTimeout(() => {
     siguiente();
-  }, 400);
+  }, 400); // 400ms = mismo tiempo que la animación
 });
 
-// botón X: lanza el icono y la carta a la izquierda
+// ─────────────────────────────────────────
+// 6. BOTÓN ✕ (nope)
+// ─────────────────────────────────────────
+
 document.querySelector(".btn-no").addEventListener("click", () => {
-  lanzarIcono("nope");
-  const carta = document.querySelector(".carta");
+  lanzarIcono("nope"); // lanza la X animada
 
-  carta.style.transform = "translateX(-1000px) rotate(-30deg)";
+  const carta = document.querySelector(".carta");
+  carta.style.transform = "translateX(-1000px) rotate(-30deg)"; // mueve la carta a la izquierda
   carta.style.transition = "transform 0.4s ease";
 
   setTimeout(() => {
@@ -130,55 +160,68 @@ document.querySelector(".btn-no").addEventListener("click", () => {
   }, 400);
 });
 
-// swipe con el ratón: detecta cuando se hace click en la carta
+// ─────────────────────────────────────────
+// 7. ARRASTRAR CON EL RATÓN (drag & swipe)
+// ─────────────────────────────────────────
+
 const carta = document.querySelector(".carta");
 
+// Cuando el usuario hace clic en la carta
 carta.addEventListener("mousedown", (e) => {
-  // guarda la posición inicial del ratón
-  startX = e.clientX;
+  startX = e.clientX; // guarda en qué posición X del monitor se hizo clic
 
+  // Activa los otros dos eventos mientras el botón esté pulsado
   document.addEventListener("mousemove", mover);
   document.addEventListener("mouseup", soltar);
 });
 
-// se ejecuta mientras se arrastra la carta
+// Se ejecuta mientras se mueve el ratón (con el botón pulsado)
 function mover(e) {
+  // Calcula cuántos píxeles se ha movido desde el inicio
   currentX = e.clientX - startX;
+
   const carta = document.querySelector(".carta");
 
+  // Mueve y rota la carta según el desplazamiento (0.05 = rotación suave)
   carta.style.transform = `translateX(${currentX}px) rotate(${currentX * 0.05}deg)`;
-  carta.style.transition = "none";
+  carta.style.transition = "none"; // sin animación mientras arrastramos
 
+  // Si se ha movido más de 30px a la derecha → like
   if (currentX > 30) {
     carta.classList.add("derecha");
     carta.classList.remove("izquierda");
-    // solo lanza si no hay uno activo
     if (!iconoActivo) {
+      // solo lanza icono si no hay uno ya
       iconoActivo = true;
       lanzarIcono("like");
     }
+
+    // Si se ha movido más de 30px a la izquierda → nope
   } else if (currentX < -30) {
     carta.classList.add("izquierda");
     carta.classList.remove("derecha");
-    // solo lanza si no hay uno activo
     if (!iconoActivo) {
       iconoActivo = true;
       lanzarIcono("nope");
     }
+
+    // Si está cerca del centro → quita los efectos visuales
   } else {
     carta.classList.remove("derecha", "izquierda");
     iconoActivo = false;
   }
 }
 
-// se ejecuta cuando se suelta el ratón
+// Se ejecuta cuando se suelta el botón del ratón
 function soltar() {
+  // Desactiva los eventos de movimiento y soltar
   document.removeEventListener("mousemove", mover);
   document.removeEventListener("mouseup", soltar);
 
   const carta = document.querySelector(".carta");
 
   if (currentX > 100) {
+    // Se soltó bien a la derecha → confirmar like
     lanzarIcono("like");
     carta.style.transform = "translateX(1000px) rotate(30deg)";
     carta.style.transition = "transform 0.4s ease";
@@ -186,6 +229,7 @@ function soltar() {
       siguiente();
     }, 400);
   } else if (currentX < -100) {
+    // Se soltó bien a la izquierda → confirmar nope
     lanzarIcono("nope");
     carta.style.transform = "translateX(-1000px) rotate(-30deg)";
     carta.style.transition = "transform 0.4s ease";
@@ -193,15 +237,21 @@ function soltar() {
       siguiente();
     }, 400);
   } else {
+    // No llegó a 100px → vuelve al centro (como si no hubiera pasado nada)
     carta.style.transform = "translateX(0) rotate(0)";
     carta.style.transition = "transform 0.3s ease";
     carta.classList.remove("derecha", "izquierda");
     iconoActivo = false;
   }
 
+  // Resetea los valores para el próximo drag
   currentX = 0;
   carta.classList.remove("derecha", "izquierda");
 }
 
-// carga la primera persona al iniciar la página
+// ─────────────────────────────────────────
+// 8. INICIO
+// Muestra la primera persona al cargar la página
+// ─────────────────────────────────────────
+
 mostrarPersona();
