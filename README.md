@@ -92,7 +92,7 @@ Para la fase de despliegue, configuramos un servidor web Nginx dentro de una Ras
 - Google Fonts (Montserrat): https://fonts.google.com
 - Referencia de CSS en MDN: https://developer.mozilla.org/es/docs/Web/CSS
 - Referencia de JavaScript en MDN: https://developer.mozilla.org/es/docs/Web/JavaScript
-- Google Stitch (Prototipado): https://stitch.withgoogle.com
+- Google Stitch (Prototipo): https://stitch.withgoogle.com
 - Claude.ai (Asistencia en desarrollo): https://claude.ai
 - Inspiración e ideas de UI/UX: Idealista y Tinder.
 
