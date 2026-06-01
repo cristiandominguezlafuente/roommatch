@@ -1,7 +1,4 @@
-/* -------------------- */
-/*       PORTADA        */
-/* -------------------- */
-
+/* Sección hero de la portada */
 .portada {
   display: flex;
   justify-content: space-evenly;
@@ -44,10 +41,7 @@
   border-radius: 30px;
 }
 
-/* -------------------- */
-/*    BTN PRINCIPAL     */
-/* -------------------- */
-
+/* Botón principal de la portada */
 .btn-principal {
   width: 134px;
   padding: 14px 28px;
@@ -58,18 +52,16 @@
   font-size: 15px;
   transition:
     background-color 0.25s ease,
-    color 0.25s ease;
+    color 0.25s ease; /* cambia color al hover */
 }
 
+/* Al hover se vuelve oscuro */
 .btn-principal:hover {
   background-color: #1a2e2b;
   color: #ffffff;
 }
 
-/* -------------------- */
-/*      BENEFICIOS      */
-/* -------------------- */
-
+/* Sección de beneficios */
 .beneficios {
   text-align: center;
   padding: 80px 120px;
@@ -95,6 +87,7 @@
   gap: 24px;
 }
 
+/* Cada tarjeta de beneficio */
 .tarjeta-beneficio {
   background-color: #ffffff;
   padding: 32px 28px;
@@ -104,9 +97,10 @@
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    border-color 0.25s ease; /* sube con sombra al hover */
 }
 
+/* Al hover sube y aparece sombra verde */
 .tarjeta-beneficio:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 36px rgba(54, 187, 167, 0.15);
@@ -140,10 +134,7 @@
   margin: 0;
 }
 
-/* -------------------- */
-/*   SECCUIÓN PREMIUM   */
-/* -------------------- */
-
+/* Sección premium */
 .premium {
   padding: 80px 120px;
   background-color: #ffffff;
@@ -174,7 +165,6 @@
   font-size: 13px;
   padding: 6px 16px;
   border-radius: 20px;
-  text-transform: uppercase;
   letter-spacing: 1px;
   border: 1px solid #a0f5e8;
 }
@@ -194,7 +184,7 @@
   line-height: 1.6;
 }
 
-/* Botón Premium */
+/* Botón de la sección premium */
 .btn-premium {
   width: 100px;
   padding: 14px 32px;
@@ -205,22 +195,24 @@
   font-size: 15px;
   transition:
     background-color 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease; /* cambia color y sube al hover */
   text-align: center;
 }
 
+/* Al hover se vuelve verde y sube */
 .btn-premium:hover {
   background-color: #36bba7;
   transform: translateY(-2px);
 }
 
-/* Lista de ventajas */
+/* Lista de ventajas premium */
 .premium-ventajas {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+/* Cada tarjeta de ventaja */
 .tarjeta-ventaja {
   display: flex;
   align-items: center;
@@ -231,9 +223,10 @@
   border: 1px solid transparent;
   transition:
     border-color 0.25s ease,
-    background-color 0.25s ease;
+    background-color 0.25s ease; /* borde verde y fondo blanco al hover */
 }
 
+/* Al hover aparece borde verde y sombra */
 .tarjeta-ventaja:hover {
   background-color: #ffffff;
   border-color: #36bba7;
@@ -253,6 +246,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
+/* El icono se rellena de verde al hover */
 .tarjeta-ventaja:hover .ventaja-icono {
   background-color: #36bba7;
   color: #ffffff;
@@ -272,10 +266,7 @@
   line-height: 1.5;
 }
 
-/* -------------------- */
-/*        PASOS         */
-/* -------------------- */
-
+/* Sección de pasos */
 .pasos {
   text-align: center;
   padding: 80px 120px;
@@ -310,6 +301,7 @@
   width: 220px;
 }
 
+/* Número del paso */
 .paso-numero {
   width: 56px;
   height: 56px;
@@ -323,7 +315,7 @@
   justify-content: center;
   transition:
     background-color 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease; /* se oscurece y crece al hover */
 }
 
 .paso h3 {
@@ -340,6 +332,7 @@
   margin: 0;
 }
 
+/* Línea divisora entre pasos */
 .paso-divisor {
   width: 80px;
   height: 2px;
@@ -347,10 +340,7 @@
   margin-top: 28px;
 }
 
-/* -------------------- */
-/*    LLAMADA A ACCION  */
-/* -------------------- */
-
+/* Sección llamada a la acción */
 .llamada-accion {
   text-align: center;
   padding: 80px 120px;
@@ -374,9 +364,9 @@
   margin: 0;
 }
 
+/* Botón de la llamada a la acción */
 .btn-llamada-accion {
   margin-top: 8px;
-  display: inline-block;
   padding: 16px 36px;
   background-color: transparent;
   color: #ffffff;
@@ -386,9 +376,10 @@
   border: 2px solid #ffffff;
   transition:
     background-color 0.25s ease,
-    color 0.25s ease;
+    color 0.25s ease; /* se rellena de blanco al hover */
 }
 
+/* Al hover se rellena de blanco y el texto se vuelve oscuro */
 .btn-llamada-accion:hover {
   background-color: #ffffff;
   color: #1a2e2b;
