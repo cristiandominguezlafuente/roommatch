@@ -10,7 +10,7 @@ const personas = [
     nombre: "Héctor, 20",
     zona: "Busca piso en Gràcia",
     desc: "Trabajadora · No fumadora · Sin mascotas",
-    foto: "img/personas/Hector.png",
+    foto: "img/personas/hector.png",
   },
   {
     nombre: "Marc, 18",
