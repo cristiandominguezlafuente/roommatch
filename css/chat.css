@@ -1,17 +1,11 @@
-/* -------------------- */
-/*      CHAT PANEL      */
-/* -------------------- */
-
+/* Panel principal del chat */
 .chat-panel {
   display: flex;
   flex-wrap: wrap;
   height: 850px;
 }
 
-/* -------------------- */
-/*     LISTA CHATS      */
-/* -------------------- */
-
+/* Lista de conversaciones */
 .lista-chats {
   background: #ffffff;
   border-right: 1px solid #e2eded;
@@ -19,6 +13,7 @@
   flex-direction: column;
 }
 
+/* Cabecera de la lista */
 .chats-cabecera {
   display: flex;
   align-items: center;
@@ -34,6 +29,7 @@
   color: #1a2e2b;
 }
 
+/* Cada conversación de la lista */
 .chat-item {
   display: flex;
   align-items: center;
@@ -43,31 +39,36 @@
   cursor: pointer;
   transition:
     background-color 0.2s ease,
-    border-left 0.2s ease;
+    border-left 0.2s ease; /* fondo y borde al hover */
 }
 
+/* Al pasar el ratón: fondo suave y borde verde izquierdo */
 .chat-item:hover {
   background-color: #f0fdfb;
   border-left: 3px solid #a0f5e8;
 }
 
+/* Conversación activa: borde verde más oscuro */
 .chat-item.activo {
   background-color: #f0fdfb;
   border-left: 3px solid #36bba7;
 }
 
+/* Avatar de la conversación */
 .chat-avatar {
   width: 46px;
   height: 46px;
   border-radius: 50%;
   object-fit: cover;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease; /* crece al hover */
 }
 
+/* El avatar crece ligeramente al pasar el ratón */
 .chat-item:hover .chat-avatar {
   transform: scale(1.08);
 }
 
+/* Nombre y último mensaje */
 .chat-info {
   flex: 1;
   display: flex;
@@ -76,35 +77,34 @@
   overflow: hidden;
 }
 
+/* Nombre del contacto */
 .chat-nombre {
   font-size: 14px;
   font-weight: 700;
   color: #1a2e2b;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease; /* color al hover */
 }
 
+/* El nombre se vuelve verde al pasar el ratón */
 .chat-item:hover .chat-nombre {
   color: #36bba7;
 }
 
+/* Último mensaje enviado */
 .chat-ultimo-mensaje {
   font-size: 12px;
   color: #5d6463;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
+/* Hora del último mensaje */
 .chat-hora {
   font-size: 11px;
   color: #a0b3b0;
-  flex-shrink: 0;
 }
 
-/* -------------------- */
-/*    VENTANA CHAT      */
-/* -------------------- */
-
+/* Ventana derecha del chat */
 .ventana-chat {
   display: flex;
   align-items: center;
@@ -112,6 +112,7 @@
   background-color: #f0fdfb;
 }
 
+/* Mensaje cuando no hay chat seleccionado */
 .chat-vacio {
   text-align: center;
   color: #a0b3b0;
@@ -120,7 +121,6 @@
 .chat-vacio i {
   font-size: 48px;
   margin-bottom: 12px;
-  display: block;
 }
 
 .chat-vacio p {
