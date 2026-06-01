@@ -1,7 +1,4 @@
-/* ==========================================================================
-   HOJA DE ESTILOS: premium.css (Simplificada)
-   ========================================================================== */
-
+/* Sección principal de la página premium */
 .seccion-principal-premium {
   font-family: "Montserrat", sans-serif;
   background-color: #f8fbfb;
@@ -9,9 +6,7 @@
   padding-bottom: 80px;
 }
 
-/* -------------------- */
-/* PRESENTACIÓN / HERO  */
-/* -------------------- */
+/* Hero de presentación con gradiente */
 .bloque-presentacion {
   text-align: center;
   padding: 90px 20px 130px;
@@ -19,8 +14,9 @@
   color: #ffffff;
 }
 
+/* Etiqueta "RoomMatch Plus" encima del título */
 .etiqueta-llamativa {
-  display: inline-block;
+  display: inline-block; /* ocupa solo el ancho de su contenido, no toda la línea */
   background-color: rgba(255, 255, 255, 0.15);
   color: #a0f5e8;
   font-weight: 700;
@@ -48,24 +44,24 @@
   line-height: 1.6;
 }
 
-/* -------------------- */
-/* TARIFAS Y PRECIOS    */
-/* -------------------- */
+/* Zona de las tarjetas de precio */
 .zona-tarifas {
   padding: 0 40px 60px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Grupo de tarjetas centrado */
 .grupo-tarifas {
   display: flex;
   justify-content: center;
   align-items: stretch;
   gap: 30px;
   flex-wrap: wrap;
-  margin-top: -85px; /* Ajuste flotante sobre el fondo oscuro */
+  margin-top: -85px; /* sube las tarjetas para que floten sobre el hero */
 }
 
+/* Tarjeta de precio individual */
 .bloque-tarifa {
   background-color: #ffffff;
   border-radius: 24px;
@@ -74,33 +70,36 @@
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
-  position: relative;
+  position: relative; /* necesario para el cartel "Recomendado" */
   box-shadow: 0 10px 30px rgba(26, 46, 43, 0.04);
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease; /* sube con sombra al hover */
 }
 
+/* Al hover la tarjeta sube y aparece sombra verde */
 .bloque-tarifa:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 40px rgba(54, 187, 167, 0.12);
 }
 
-/* Variación tarjeta recomendada */
+/* Tarjeta recomendada con borde verde y ligeramente más grande */
 .bloque-tarifa.tarifa-recomendada {
   border: 2px solid #36bba7;
-  transform: scale(1.03);
+  transform: scale(1.03); /* la hace un 3% más grande que las demás */
 }
 
+/* Al hover mantiene la escala y además sube */
 .bloque-tarifa.tarifa-recomendada:hover {
   transform: translateY(-8px) scale(1.03);
 }
 
+/* Cartel "Recomendado" flotando arriba de la tarjeta */
 .cartel-recomendado {
-  position: absolute;
+  position: absolute; /* flota sobre la tarjeta */
   top: -14px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* lo centra horizontalmente */
   background-color: #36bba7;
   color: #ffffff;
   font-weight: 700;
@@ -111,7 +110,7 @@
   letter-spacing: 0.5px;
 }
 
-/* Cabecera interna */
+/* Cabecera de cada tarjeta con nombre y precio */
 .parte-superior-tarifa {
   text-align: center;
   margin-bottom: 28px;
@@ -144,12 +143,12 @@
   color: #5d6463;
 }
 
-/* Listas de puntos */
+/* Lista de características de cada plan */
 .lista-caracteristicas {
   list-style: none;
   padding: 0;
   margin: 0 0 35px 0;
-  flex-grow: 1;
+  flex-grow: 1; /* ocupa todo el espacio disponible para que el botón quede siempre abajo */
 }
 
 .lista-caracteristicas li {
@@ -166,21 +165,23 @@
   color: #1a2e2b;
 }
 
+/* Icono de check verde (característica incluida) */
 .icono-si {
   color: #36bba7;
   font-size: 15px;
   width: 16px;
 }
 
+/* Icono de cruz gris (característica no incluida) */
 .icono-no {
   color: #c4d9d6;
   font-size: 14px;
   width: 16px;
 }
 
-/* Botones */
+/* Botón de cada tarjeta */
 .boton-tarifa {
-  display: block;
+  display: block; /* ocupa todo el ancho de la tarjeta */
   text-align: center;
   padding: 14px 24px;
   border-radius: 25px;
@@ -190,25 +191,29 @@
   transition:
     background-color 0.25s ease,
     color 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease; /* colores al hover */
 }
 
+/* Botón del plan gratis */
 .boton-gris {
   background-color: #f0fdfb;
   color: #36bba7;
   border: 1px solid #36bba7;
 }
 
+/* Al hover se rellena de verde */
 .boton-gris:hover {
   background-color: #36bba7;
   color: #ffffff;
 }
 
+/* Botón del plan premium */
 .boton-verde {
   background-color: #36bba7;
   color: #ffffff;
 }
 
+/* Al hover se vuelve oscuro */
 .boton-verde:hover {
   background-color: #1a2e2b;
 }
