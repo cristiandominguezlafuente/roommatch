@@ -99,6 +99,8 @@ Para la fase de despliegue, configuramos un servidor web Nginx dentro de una Ras
 ## 9. Anexos
 
 - Capturas de pantalla de la interfaz de nuestra aplicación (vistas de: `index.html`, `register.html`, `login.html`, `match.html`, `chat.html`, `perfil.html` y `premium.html`).
+
+
 - Enlace al repositorio de código fuente en GitHub: 
 - https://github.com/cristiandominguezlafuente/roommatch
 - https://cristiandominguezlafuente.github.io/roommatch/
