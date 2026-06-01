@@ -1,3 +1,4 @@
+/* Contenedor principal centrado con fondo verde claro */
 main {
   display: flex;
   flex-direction: column;
@@ -6,46 +7,56 @@ main {
   padding: 100px 50px 60px;
 }
 
+/* Zona que contiene la carta */
 .zona-match {
   width: 100%;
 }
 
+/* Centra la carta y limita su ancho */
 .lista-match {
   max-width: 440px;
   margin: 0 auto;
   width: 100%;
 }
 
+/* Carta de perfil con sombra y bordes redondeados */
 .carta {
-  position: relative;
+  position: relative; /* necesario para posicionar la info encima */
   border-radius: 24px;
-  overflow: hidden;
+  overflow: hidden; /* recorta la imagen dentro de la carta */
   height: 600px;
   cursor: pointer;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* Contenedor de la foto que ocupa toda la carta */
 .carta-foto {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
+/* La foto cubre toda la carta sin deformarse */
 .carta-foto img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: cover; /* recorta la imagen para que llene el espacio */
+  object-position: center top; /* muestra la parte superior de la imagen */
   display: block;
 }
 
+/* Info del perfil encima de la foto con gradiente oscuro */
 .carta-info {
-  position: absolute;
+  position: absolute; /* flota encima de la foto */
   bottom: 0;
   left: 0;
   right: 0;
   padding: 28px 24px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    transparent 100%
+  ); /* degradado de negro a transparente */
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -70,6 +81,7 @@ main {
   margin: 0;
 }
 
+/* Botones de like y nope centrados debajo de la carta */
 .acciones {
   display: flex;
   justify-content: center;
@@ -77,10 +89,11 @@ main {
   margin-top: 28px;
 }
 
+/* Botón de nope (X) */
 .btn-no {
   width: 68px;
   height: 68px;
-  border-radius: 50%;
+  border-radius: 50%; /* forma circular */
   border: 2px solid #e2eded;
   background: white;
   color: #f26b9f;
@@ -90,19 +103,21 @@ main {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transition: 0.2s;
+  transition: 0.2s; /* transición suave al hover */
 }
 
+/* Al hover se rellena de rosa */
 .btn-no:hover {
   background: #f26b9f;
   border-color: #f26b9f;
   color: white;
 }
 
+/* Botón de like (corazón) */
 .btn-si {
   width: 68px;
   height: 68px;
-  border-radius: 50%;
+  border-radius: 50%; /* forma circular */
   border: 2px solid #e2eded;
   background: white;
   color: #36bba7;
@@ -112,44 +127,30 @@ main {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transition: 0.2s;
+  transition: 0.2s; /* transición suave al hover */
 }
 
+/* Al hover se rellena de verde */
 .btn-si:hover {
   background: #36bba7;
   border-color: #36bba7;
   color: white;
 }
 
-/*Animacion match*/
-
+/* Icono animado que sube al dar like o nope */
 .icono-match {
-  position: fixed;
+  position: fixed; /* se posiciona sobre toda la página */
   font-size: 80px;
-  z-index: 100;
-  pointer-events: none;
-  animation: subirCrecer 0.7s ease forwards;
+  pointer-events: none; /* no interfiere con los clics */
+  animation: subirCrecer 0.7s ease forwards; /* animación de subir y crecer */
 }
 
+/* Color verde para el like */
 .icono-match.like {
   color: #36bba7;
 }
 
+/* Color rosa para el nope */
 .icono-match.nope {
   color: #f26b9f;
-}
-
-@keyframes subirCrecer {
-  0% {
-    transform: translateY(0px) scale(0.5);
-    opacity: 1;
-  }
-  70% {
-    transform: translateY(-300px) scale(2);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-420px) scale(2.5);
-    opacity: 0;
-  }
 }
