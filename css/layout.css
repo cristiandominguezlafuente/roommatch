@@ -1,7 +1,4 @@
-/* -------------------- */
-/*     GLOBAL BODY      */
-/* -------------------- */
-
+/* Estilos globales del body */
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -19,10 +16,7 @@ a {
   height: 20px;
 }
 
-/* -------------------- */
-/*       HEADER         */
-/* -------------------- */
-
+/* Cabecera principal */
 header {
   display: flex;
   justify-content: space-between;
@@ -39,16 +33,14 @@ header {
   font-size: 20px;
 }
 
-/* -------------------- */
-/*         NAV          */
-/* -------------------- */
-
+/* Navegación principal */
 .nav {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+/* Cada enlace del nav */
 .nav a {
   display: flex;
   align-items: center;
@@ -60,30 +52,30 @@ header {
   font-weight: 500;
   transition:
     background-color 0.25s ease,
-    color 0.25s ease;
+    color 0.25s ease; /* fondo y color al hover */
 }
 
+/* Al hover fondo suave y color verde */
 .nav a:hover {
   background-color: #f0fdfb;
   color: #36bba7;
 }
 
+/* Enlace de la página activa */
 .nav a.activo {
   background-color: #f0fdfb;
   color: #36bba7;
   font-weight: 700;
 }
 
-/* -------------------- */
-/*    HEADER BUTTONS    */
-/* -------------------- */
-
+/* Botones del header */
 .header-actions {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+/* Botón de iniciar sesión */
 .btn-login {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -92,18 +84,16 @@ header {
   background-color: #36bba7;
   padding: 12px 22px;
   border-radius: 20px;
-  transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease; /* oscurece al hover */
 }
 
+/* Al hover se vuelve oscuro */
 .btn-login:hover {
   background-color: #1a2e2b;
   color: white;
 }
 
-/* -------------------- */
-/*       FOOTER         */
-/* -------------------- */
-
+/* Pie de página */
 .footer {
   background-color: #1a2e2b;
   padding: 50px 60px 24px 60px;
@@ -119,6 +109,7 @@ header {
   gap: 40px;
 }
 
+/* Cada columna del footer */
 .footer-col {
   display: flex;
   flex-direction: column;
@@ -134,16 +125,19 @@ header {
   margin-bottom: 4px;
 }
 
+/* Enlaces del footer */
 .footer-col a {
   color: #a0b3b0;
   font-size: 14px;
-  transition: color 0.25s ease;
+  transition: color 0.25s ease; /* se vuelve blanco al hover */
 }
 
+/* Al hover el enlace se vuelve blanco */
 .footer-col a:hover {
   color: #ffffff;
 }
 
+/* Iconos de redes sociales */
 .footer-social {
   display: flex;
   gap: 12px;
@@ -153,13 +147,15 @@ header {
   font-size: 18px;
   color: #a0b3b0;
   cursor: pointer;
-  transition: color 0.25s ease;
+  transition: color 0.25s ease; /* se vuelve verde al hover */
 }
 
+/* Al hover el icono se vuelve verde */
 .footer-col i:hover {
   color: #36bba7;
 }
 
+/* Línea de copyright */
 .footer-copy {
   text-align: center;
   margin-top: 40px;
